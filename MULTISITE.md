@@ -37,9 +37,27 @@
 ## 核心修改
 
 ### 1. 主入口 (`index.php`)
-- 添加了基于 `HTTP_HOST` 的站点路由逻辑
+- 添加了基于 `HTTP_HOST` 的智能站点路由逻辑
+- **支持子域名自动匹配**：`www.example.com`、`m.example.com`、`api.example.com` 等都会自动路由到 `sites/example.com/`
 - 动态设置 `SITE_PATH_CONTENT` 常量指向对应站点的 `bl-content` 目录
-- 如果找不到对应站点，自动回退到 `_default` 站点
+- 多层匹配策略：精确匹配 → 主域名匹配 → 模糊匹配 → 默认站点
+
+### 2. 智能域名匹配策略
+系统采用四层匹配策略确保最佳的站点路由：
+
+1. **精确匹配**：直接匹配完整域名
+   - `jyatpw.com` → `sites/jyatpw.com/`
+
+2. **主域名匹配**：自动处理子域名
+   - `www.jyatpw.com` → `sites/jyatpw.com/`
+   - `m.jyatpw.com` → `sites/jyatpw.com/`
+   - `api.jyatpw.com` → `sites/jyatpw.com/`
+
+3. **模糊匹配**：处理复杂域名情况
+   - 自动提取主域名进行匹配
+
+4. **默认回退**：未匹配时使用默认站点
+   - `unknown-domain.com` → `sites/_default/`
 
 ### 2. 核心初始化 (`bl-kernel/boot/init.php`)
 - 支持动态 `PATH_CONTENT` 路径设置
@@ -62,6 +80,40 @@
 - 管理站点配置文件
 
 ## 使用方法
+
+### 子域名支持
+
+**自动子域名路由**：系统会自动将子域名路由到对应的主域名站点
+
+```
+配置的站点: sites/example.com/
+
+支持的访问方式:
+✓ example.com          → sites/example.com/
+✓ www.example.com      → sites/example.com/
+✓ m.example.com        → sites/example.com/
+✓ api.example.com      → sites/example.com/
+✓ admin.example.com    → sites/example.com/
+✓ blog.example.com     → sites/example.com/
+```
+
+**实际案例**：
+```
+配置的站点: 
+- sites/jyatpw.com/
+- sites/wiiwedding.com/
+
+访问效果:
+jyatpw.com           → sites/jyatpw.com/     ✓
+www.jyatpw.com       → sites/jyatpw.com/     ✓
+m.jyatpw.com         → sites/jyatpw.com/     ✓
+
+wiiwedding.com       → sites/wiiwedding.com/ ✓
+www.wiiwedding.com   → sites/wiiwedding.com/ ✓
+m.wiiwedding.com     → sites/wiiwedding.com/ ✓
+
+unknown-domain.com   → sites/_default/       ✓
+```
 
 ### 新建站点
 
