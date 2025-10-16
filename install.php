@@ -47,10 +47,36 @@ function getSiteDirectory() {
     // Remove port if present
     $host = preg_replace('/:\d+$/', '', $host);
     
-    $siteDir = __DIR__ . '/sites/' . $host;
+    // Function to extract main domain from subdomain
+    function getMainDomain($hostname) {
+        // Remove www. prefix if present
+        if (strpos($hostname, 'www.') === 0) {
+            $hostname = substr($hostname, 4);
+        }
+        
+        // For other subdomains (m., api., etc.), extract the main domain
+        $parts = explode('.', $hostname);
+        if (count($parts) >= 2) {
+            // For domains like m.example.com, return example.com
+            // For domains like example.com, return example.com
+            if (count($parts) > 2) {
+                // This might be a subdomain, try to get the main domain
+                $mainDomain = implode('.', array_slice($parts, -2));
+                return $mainDomain;
+            }
+        }
+        
+        return $hostname;
+    }
+    
+    // Get the main domain for site directory naming
+    $mainDomain = getMainDomain($host);
+    
+    $siteDir = __DIR__ . '/sites/' . $mainDomain;
     
     return array(
         'host' => $host,
+        'mainDomain' => $mainDomain,
         'siteDir' => $siteDir,
         'contentDir' => $siteDir . '/bl-content'
     );

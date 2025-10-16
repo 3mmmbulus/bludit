@@ -19,21 +19,90 @@ class MultiSite {
         // Remove port if present
         $host = preg_replace('/:\d+$/', '', $host);
         
-        $siteDir = PATH_ROOT . 'sites' . DS . $host;
-        $defaultSiteDir = PATH_ROOT . 'sites' . DS . '_default';
+        // Function to extract main domain from subdomain
+        $getMainDomain = function($hostname) {
+            // Remove www. prefix if present
+            if (strpos($hostname, 'www.') === 0) {
+                $hostname = substr($hostname, 4);
+            }
+            
+            // For other subdomains (m., api., etc.), extract the main domain
+            $parts = explode('.', $hostname);
+            if (count($parts) >= 2) {
+                // For domains like m.example.com, return example.com
+                // For domains like example.com, return example.com
+                if (count($parts) > 2) {
+                    // This might be a subdomain, try to get the main domain
+                    $mainDomain = implode('.', array_slice($parts, -2));
+                    return $mainDomain;
+                }
+            }
+            
+            return $hostname;
+        };
         
-        // Check if site-specific directory exists
-        if (is_dir($siteDir) && file_exists($siteDir . DS . 'site.json')) {
+        // List all existing site directories
+        $sitesPath = PATH_ROOT . 'sites';
+        $availableSites = array();
+        
+        if (is_dir($sitesPath)) {
+            $directories = scandir($sitesPath);
+            foreach ($directories as $dir) {
+                if ($dir !== '.' && $dir !== '..' && $dir !== '_default' && is_dir($sitesPath . DS . $dir)) {
+                    $siteConfigPath = $sitesPath . DS . $dir . DS . 'site.json';
+                    if (file_exists($siteConfigPath)) {
+                        $availableSites[] = $dir;
+                    }
+                }
+            }
+        }
+        
+        // First try: exact match with current host
+        $exactSiteDir = $sitesPath . DS . $host;
+        if (is_dir($exactSiteDir) && file_exists($exactSiteDir . DS . 'site.json')) {
             return array(
                 'host' => $host,
-                'siteDir' => $siteDir,
-                'contentDir' => $siteDir . DS . 'bl-content',
-                'configFile' => $siteDir . DS . 'site.json',
+                'siteDir' => $exactSiteDir,
+                'contentDir' => $exactSiteDir . DS . 'bl-content',
+                'configFile' => $exactSiteDir . DS . 'site.json',
                 'isDefault' => false
             );
         }
         
+        // Second try: match main domain (handle subdomains)
+        $mainDomain = $getMainDomain($host);
+        if ($mainDomain !== $host) {
+            $mainSiteDir = $sitesPath . DS . $mainDomain;
+            if (is_dir($mainSiteDir) && file_exists($mainSiteDir . DS . 'site.json')) {
+                return array(
+                    'host' => $mainDomain,
+                    'siteDir' => $mainSiteDir,
+                    'contentDir' => $mainSiteDir . DS . 'bl-content',
+                    'configFile' => $mainSiteDir . DS . 'site.json',
+                    'isDefault' => false
+                );
+            }
+        }
+        
+        // Third try: fuzzy matching for similar domains
+        foreach ($availableSites as $siteDomain) {
+            $siteMainDomain = $getMainDomain($siteDomain);
+            $hostMainDomain = $getMainDomain($host);
+            
+            if ($siteMainDomain === $hostMainDomain) {
+                $siteDir = $sitesPath . DS . $siteDomain;
+                return array(
+                    'host' => $siteDomain,
+                    'siteDir' => $siteDir,
+                    'contentDir' => $siteDir . DS . 'bl-content',
+                    'configFile' => $siteDir . DS . 'site.json',
+                    'isDefault' => false
+                );
+            }
+        }
+        
         // Fall back to default site
+        $defaultSiteDir = $sitesPath . DS . '_default';
         if (is_dir($defaultSiteDir) && file_exists($defaultSiteDir . DS . 'site.json')) {
             return array(
                 'host' => '_default',

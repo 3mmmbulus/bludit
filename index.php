@@ -14,15 +14,72 @@ function getSiteDirectory() {
     // Remove port if present
     $host = preg_replace('/:\d+$/', '', $host);
     
-    $siteDir = __DIR__ . '/sites/' . $host;
-    $defaultSiteDir = __DIR__ . '/sites/_default';
+    // Function to extract main domain from subdomain
+    function getMainDomain($hostname) {
+        // Remove www. prefix if present
+        if (strpos($hostname, 'www.') === 0) {
+            $hostname = substr($hostname, 4);
+        }
+        
+        // For other subdomains (m., api., etc.), extract the main domain
+        $parts = explode('.', $hostname);
+        if (count($parts) >= 2) {
+            // For domains like m.example.com, return example.com
+            // For domains like example.com, return example.com
+            if (count($parts) > 2) {
+                // This might be a subdomain, try to get the main domain
+                $mainDomain = implode('.', array_slice($parts, -2));
+                return $mainDomain;
+            }
+        }
+        
+        return $hostname;
+    }
     
-    // Check if site-specific directory exists
-    if (is_dir($siteDir) && file_exists($siteDir . '/bl-content/databases/site.php')) {
-        return $siteDir;
+    // List all existing site directories
+    $sitesPath = __DIR__ . '/sites';
+    $availableSites = array();
+    
+    if (is_dir($sitesPath)) {
+        $directories = scandir($sitesPath);
+        foreach ($directories as $dir) {
+            if ($dir !== '.' && $dir !== '..' && $dir !== '_default' && is_dir($sitesPath . '/' . $dir)) {
+                $siteConfigPath = $sitesPath . '/' . $dir . '/bl-content/databases/site.php';
+                if (file_exists($siteConfigPath)) {
+                    $availableSites[] = $dir;
+                }
+            }
+        }
+    }
+    
+    // First try: exact match with current host
+    $exactSiteDir = $sitesPath . '/' . $host;
+    if (is_dir($exactSiteDir) && file_exists($exactSiteDir . '/bl-content/databases/site.php')) {
+        return $exactSiteDir;
+    }
+    
+    // Second try: match main domain (handle subdomains)
+    $mainDomain = getMainDomain($host);
+    if ($mainDomain !== $host) {
+        $mainSiteDir = $sitesPath . '/' . $mainDomain;
+        if (is_dir($mainSiteDir) && file_exists($mainSiteDir . '/bl-content/databases/site.php')) {
+            return $mainSiteDir;
+        }
+    }
+    
+    // Third try: fuzzy matching for similar domains
+    foreach ($availableSites as $siteDomain) {
+        $siteMainDomain = getMainDomain($siteDomain);
+        $hostMainDomain = getMainDomain($host);
+        
+        if ($siteMainDomain === $hostMainDomain) {
+            $siteDir = $sitesPath . '/' . $siteDomain;
+            return $siteDir;
+        }
     }
     
     // Fall back to default site
+    $defaultSiteDir = $sitesPath . '/_default';
     if (is_dir($defaultSiteDir) && file_exists($defaultSiteDir . '/bl-content/databases/site.php')) {
         return $defaultSiteDir;
     }

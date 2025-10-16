@@ -1,6 +1,6 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "默认标题",
+    "title": "站点2",
     "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
