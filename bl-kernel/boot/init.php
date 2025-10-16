@@ -35,7 +35,13 @@ define('PATH_LANGUAGES',		PATH_ROOT . 'bl-languages' . DS);
 define('PATH_THEMES',			PATH_ROOT . 'bl-themes' . DS);
 define('PATH_PLUGINS',			PATH_ROOT . 'bl-plugins' . DS);
 define('PATH_KERNEL',			PATH_ROOT . 'bl-kernel' . DS);
-define('PATH_CONTENT',			PATH_ROOT . 'bl-content' . DS);
+
+// Multi-site support: Use SITE_PATH_CONTENT if defined, otherwise fallback to original
+if (defined('SITE_PATH_CONTENT')) {
+    define('PATH_CONTENT', SITE_PATH_CONTENT);
+} else {
+    define('PATH_CONTENT', PATH_ROOT . 'bl-content' . DS);
+}
 
 define('PATH_ABSTRACT',			PATH_KERNEL . 'abstract' . DS);
 define('PATH_RULES',			PATH_KERNEL . 'boot' . DS . 'rules' . DS);
@@ -100,6 +106,7 @@ include(PATH_KERNEL . 'url.class.php');
 include(PATH_KERNEL . 'login.class.php');
 include(PATH_KERNEL . 'parsedown.class.php');
 include(PATH_KERNEL . 'security.class.php');
+include(PATH_KERNEL . 'multisite.class.php');
 
 // Include functions
 include(PATH_KERNEL . 'functions.php');
@@ -175,8 +182,19 @@ define('HTML_PATH_ADMIN_THEME_CSS',	HTML_PATH_ADMIN_THEME . 'css/');
 define('HTML_PATH_CORE_JS',		HTML_PATH_ROOT . 'bl-kernel/js/');
 define('HTML_PATH_CORE_CSS',		HTML_PATH_ROOT . 'bl-kernel/css/');
 define('HTML_PATH_CORE_IMG',		HTML_PATH_ROOT . 'bl-kernel/img/');
-define('HTML_PATH_CONTENT',		HTML_PATH_ROOT . 'bl-content/');
-define('HTML_PATH_UPLOADS',		HTML_PATH_ROOT . 'bl-content/uploads/');
+
+// Multi-site support: Dynamic content path based on current site
+if (defined('SITE_PATH_CONTENT')) {
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $host = preg_replace('/:\d+$/', '', $host);
+    $siteName = is_dir(PATH_ROOT . 'sites/' . $host) ? $host : '_default';
+    define('HTML_PATH_CONTENT',		HTML_PATH_ROOT . 'sites/' . $siteName . '/bl-content/');
+    define('HTML_PATH_UPLOADS',		HTML_PATH_CONTENT . 'uploads/');
+} else {
+    define('HTML_PATH_CONTENT',		HTML_PATH_ROOT . 'bl-content/');
+    define('HTML_PATH_UPLOADS',		HTML_PATH_ROOT . 'bl-content/uploads/');
+}
+
 define('HTML_PATH_UPLOADS_PAGES',	HTML_PATH_UPLOADS . 'pages/');
 define('HTML_PATH_UPLOADS_PROFILES',	HTML_PATH_UPLOADS . 'profiles/');
 define('HTML_PATH_UPLOADS_THUMBNAILS',	HTML_PATH_UPLOADS . 'thumbnails/');

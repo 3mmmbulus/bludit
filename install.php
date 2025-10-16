@@ -41,9 +41,28 @@ define('BLUDIT', true);
 // Directory separator
 define('DS', DIRECTORY_SEPARATOR);
 
+// Multi-site support: Determine site directory based on HTTP_HOST
+function getSiteDirectory() {
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    // Remove port if present
+    $host = preg_replace('/:\d+$/', '', $host);
+    
+    $siteDir = __DIR__ . '/sites/' . $host;
+    
+    return array(
+        'host' => $host,
+        'siteDir' => $siteDir,
+        'contentDir' => $siteDir . '/bl-content'
+    );
+}
+
+$siteInfo = getSiteDirectory();
+
 // PHP paths
 define('PATH_ROOT',		__DIR__ . DS);
-define('PATH_CONTENT',		PATH_ROOT . 'bl-content' . DS);
+define('PATH_SITES',		PATH_ROOT . 'sites' . DS);
+define('PATH_SITE',		$siteInfo['siteDir'] . DS);
+define('PATH_CONTENT',		$siteInfo['contentDir'] . DS);
 define('PATH_KERNEL',		PATH_ROOT . 'bl-kernel' . DS);
 define('PATH_LANGUAGES',	PATH_ROOT . 'bl-languages' . DS);
 define('PATH_UPLOADS',		PATH_CONTENT . 'uploads' . DS);
@@ -193,6 +212,7 @@ function getLanguageList()
 // Check if Bludit is installed
 function alreadyInstalled()
 {
+	// Check if site database exists for current domain
 	return file_exists(PATH_DATABASES . 'site.php');
 }
 
@@ -242,12 +262,14 @@ RewriteRule ^(.*) index.php [PT,L]
 		}
 	}
 
-	// Try to create the directory content
+	// Try to create the sites directory structure
+	@mkdir(PATH_SITES, DIR_PERMISSIONS, true);
+	@mkdir(PATH_SITE, DIR_PERMISSIONS, true);
 	@mkdir(PATH_CONTENT, DIR_PERMISSIONS, true);
 
 	// Check if the directory content is writeable.
 	if (!is_writable(PATH_CONTENT)) {
-		$errorText = 'Writing test failure, check directory "bl-content" permissions.';
+		$errorText = 'Writing test failure, check site directory "' . PATH_CONTENT . '" permissions.';
 		error_log('[ERROR] ' . $errorText, 0);
 		array_push($output, $errorText);
 	}
@@ -557,6 +579,40 @@ function install($adminPassword, $timezone)
 		),
 		LOCK_EX
 	);
+
+	// Create site.json configuration file for multi-site support
+	global $siteInfo;
+	
+	// If Bludit is not installed inside a folder, the URL doesn't need finish with /
+	// Example (root): https://domain.com
+	// Example (inside a folder): https://domain.com/folder/
+	if (HTML_PATH_ROOT == '/') {
+		$siteUrl = PROTOCOL . DOMAIN;
+	} else {
+		$siteUrl = PROTOCOL . DOMAIN . HTML_PATH_ROOT;
+	}
+	
+	$siteConfig = array(
+		'title' => 'BLUDIT',
+		'slogan' => $L->get('welcome-to-bludit'),
+		'description' => $L->get('congratulations-you-have-successfully-installed-your-bludit'),
+		'language' => $L->currentLanguage(),
+		'timezone' => $timezone,
+		'theme' => 'alternative',
+		'adminTheme' => 'booty',
+		'domain' => $siteUrl,
+		'host' => $siteInfo['host'],
+		'enabledPlugins' => array(
+			'about' => true,
+			'alternative' => true
+		),
+		'settings' => array(
+			'itemsPerPage' => 6,
+			'orderBy' => 'date'
+		)
+	);
+	
+	file_put_contents(PATH_SITE . 'site.json', json_encode($siteConfig, JSON_PRETTY_PRINT), LOCK_EX);
 
 	return true;
 }

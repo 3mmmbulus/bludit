@@ -1,0 +1,17 @@
+{
+    "title": "Default Site",
+    "slogan": "兜底站点",
+    "description": "默认站点，用于未匹配域名的访问",
+    "language": "en",
+    "timezone": "UTC",
+    "theme": "alternative",
+    "adminTheme": "booty",
+    "domain": "",
+    "enabledPlugins": {
+        "about": true
+    },
+    "settings": {
+        "itemsPerPage": 5,
+        "orderBy": "date"
+    }
+}
