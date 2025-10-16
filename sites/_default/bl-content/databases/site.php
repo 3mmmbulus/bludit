@@ -1,7 +1,7 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "默认标题",
-    "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
+    "title": "默认站点",
+    "slogan": "Bludit 多站点模式",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
     "itemsPerPage": 6,

@@ -1,7 +1,7 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "站点2",
-    "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
+    "title": "JYATPW.COM",
+    "slogan": "欢迎访问 JYATPW.COM",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
     "itemsPerPage": 6,
@@ -16,8 +16,8 @@
     "uriTag": "\/tag\/",
     "uriCategory": "\/category\/",
     "uriBlog": "",
-    "url": "https:\/\/wiiwedding.com",
-    "emailFrom": "no-reply@wiiwedding.com",
+    "url": "https:\/\/jyatpw.com",
+    "emailFrom": "no-reply@jyatpw.com",
     "orderBy": "date",
     "currentBuild": "0",
     "twitter": "https:\/\/twitter.com\/bludit",

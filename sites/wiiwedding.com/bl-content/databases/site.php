@@ -1,6 +1,6 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "这是wiiwedding初始化",
+    "title": "\u8fd9\u662fwiiwedding\u521d\u59cb\u5316",
     "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
@@ -8,7 +8,7 @@
     "language": "zh_CN",
     "locale": "zh_CN",
     "timezone": "Asia\/Shanghai",
-    "theme": "alternative",
+    "theme": "blogx",
     "adminTheme": "booty",
     "homepage": "",
     "pageNotFound": "",
@@ -19,7 +19,7 @@
     "url": "https:\/\/wiiwedding.com",
     "emailFrom": "no-reply@wiiwedding.com",
     "orderBy": "date",
-    "currentBuild": "0",
+    "currentBuild": 20240806,
     "twitter": "https:\/\/twitter.com\/bludit",
     "facebook": "https:\/\/www.facebook.com\/bluditcms",
     "codepen": "",
