@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('BLUDIT') or die('Maigewan CMS.');
 
 // Bludit version
 define('BLUDIT_VERSION',        '3.16.2');

@@ -8,17 +8,10 @@ RewriteEngine on
 # Base directory
 RewriteBase /
 
-# Deny direct access to the next directories in both bl-content and sites/*/bl-content
+# Deny direct access to the next directories
 RewriteRule ^bl-content/(databases|workspaces|pages|tmp)/.*$ - [R=404,L]
-RewriteRule ^sites/[^/]+/bl-content/(databases|workspaces|pages|tmp)/.*$ - [R=404,L]
 
-# Allow access to uploads in sites/*/bl-content/uploads
-RewriteRule ^sites/[^/]+/bl-content/uploads/.*$ - [L]
-
-# Deny access to sites directory except uploads
-RewriteRule ^sites/[^/]+/(?!bl-content/uploads/).*$ - [R=404,L]
-
-# All other URL process by index.php
+# All URL process by index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php [PT,L]

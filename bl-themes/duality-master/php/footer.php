@@ -26,7 +26,7 @@
     </ul>
     <p class="copyright">
         <?php echo $site->footer(); ?>&nbsp;&nbsp;
-        Powered by <a target="_blank" href="https://www.bludit.com">Bludit</a>. &nbsp;&nbsp; Duality
+        . &nbsp;&nbsp; Duality
         Design by <a title="Colapiombo" href="https://combi.li/">Colapiombo</a>
     </p>
 

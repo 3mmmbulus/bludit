@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('BLUDIT') or die('Maigewan CMS.');
 
 class Site extends dbJSON
 {
@@ -7,6 +7,7 @@ class Site extends dbJSON
 		'slogan' =>		'',
 		'description' =>		'',
 		'footer' =>		'I wanna be a pirate!',
+		'primaryKeyword' =>	'',
 		'itemsPerPage' =>	6,
 		'language' =>		'en',
 		'locale' =>		'en, en_US, en_AU, en_CA, en_GB, en_IE, en_NZ',
@@ -212,6 +213,11 @@ class Site extends dbJSON
 	public function vk()
 	{
 		return $this->getField('vk');
+	}
+
+	public function primaryKeyword()
+	{
+		return $this->getField('primaryKeyword');
 	}
 
 	public function orderBy()

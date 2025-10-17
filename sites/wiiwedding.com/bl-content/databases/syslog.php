@@ -1,82 +1,82 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 [
     {
-        "date": "2025-10-17 09:10:25",
-        "dictionaryKey": "plugin-activated",
-        "notes": "API",
-        "idExecution": "68f197813c028",
-        "method": "GET",
+        "date": "2025-10-17 15:32:50",
+        "dictionaryKey": "settings-changes",
+        "notes": "",
+        "idExecution": "68f1f12242ae6",
+        "method": "POST",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:30:01",
+        "date": "2025-10-17 15:16:06",
         "dictionaryKey": "new-theme-configured",
-        "notes": "andy",
-        "idExecution": "68f11d898874c",
+        "notes": "fsblogx",
+        "idExecution": "68f1ed36758f7",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:30:01",
+        "date": "2025-10-17 15:16:06",
         "dictionaryKey": "plugin-deactivated",
-        "notes": "Alternative Theme",
-        "idExecution": "68f11d898874c",
+        "notes": "\u66ff\u4ee3\u4e3b\u9898",
+        "idExecution": "68f1ed36758f7",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:29:03",
+        "date": "2025-10-17 15:15:47",
         "dictionaryKey": "new-theme-configured",
         "notes": "alternative",
-        "idExecution": "68f11d4fea652",
+        "idExecution": "68f1ed231cd60",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:29:03",
+        "date": "2025-10-17 15:15:47",
         "dictionaryKey": "plugin-activated",
-        "notes": "Alternative Theme",
-        "idExecution": "68f11d4fea652",
+        "notes": "\u66ff\u4ee3\u4e3b\u9898",
+        "idExecution": "68f1ed231cd60",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:28:50",
-        "dictionaryKey": "new-theme-configured",
-        "notes": "bl-grunge-main",
-        "idExecution": "68f11d42d3300",
+        "date": "2025-10-17 15:15:47",
+        "dictionaryKey": "plugin-deactivated",
+        "notes": "Popeye\u4e3b\u9898",
+        "idExecution": "68f1ed231cd60",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:25:23",
+        "date": "2025-10-17 15:15:14",
         "dictionaryKey": "new-theme-configured",
-        "notes": "u-master",
-        "idExecution": "68f11c7341001",
+        "notes": "popeye",
+        "idExecution": "68f1ed02b336c",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:17:06",
-        "dictionaryKey": "new-theme-configured",
-        "notes": "bludit-identity-1.0",
-        "idExecution": "68f11a828fec0",
+        "date": "2025-10-17 15:15:14",
+        "dictionaryKey": "plugin-activated",
+        "notes": "Popeye\u4e3b\u9898",
+        "idExecution": "68f1ed02b336c",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:16:46",
-        "dictionaryKey": "new-theme-configured",
-        "notes": "bludit-aerial-1.0",
-        "idExecution": "68f11a6e869db",
+        "date": "2025-10-17 15:15:14",
+        "dictionaryKey": "plugin-deactivated",
+        "notes": "\u66ff\u4ee3\u4e3b\u9898",
+        "idExecution": "68f1ed02b336c",
         "method": "GET",
         "username": "admin"
     },
     {
-        "date": "2025-10-17 00:03:35",
+        "date": "2025-10-17 15:14:56",
         "dictionaryKey": "new-theme-configured",
-        "notes": "devtheme",
-        "idExecution": "68f1175747b11",
+        "notes": "alternative",
+        "idExecution": "68f1ecf0d24f2",
         "method": "GET",
         "username": "admin"
     }

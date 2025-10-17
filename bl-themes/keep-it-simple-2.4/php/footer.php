@@ -41,7 +41,7 @@
 
       </ul>
 
-      <p class="copyright"><?php echo $site->footer(); ?> Powered by <a target="_blank" href="https://www.bludit.com">Bludit</a>. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
+      <p class="copyright"><?php echo $site->footer(); ?> . &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
 
     </div>
 

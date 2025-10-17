@@ -12,7 +12,7 @@
                                 <i class="fab fa-<?php echo $key ?> fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                    </li><?php endif; ?><?php endforeach; ?><?php echo $site->footer()?> - Powered by <a href="https://www.bludit.com">BLUDIT</a>
+                    </li><?php endif; ?><?php endforeach; ?><?php echo $site->footer()?> - 
                 </p>
             </div>
         </div>

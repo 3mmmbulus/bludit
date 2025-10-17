@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 {
     "2222222222222222": {
         "title": "2222222222222222",

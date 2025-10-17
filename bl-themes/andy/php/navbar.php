@@ -9,7 +9,6 @@
         
 
           <ul class="menu sf-menu">
-          <!-- Static pages -->
           <?php
             $current_page = $_SERVER['REQUEST_URI'];
             foreach ($staticContent as $staticPage) : ?>
@@ -22,7 +21,6 @@
         </ul>
 
 
-        <!-- Social Networks -->
         <ul class="menu sf-menu social">
           <?php foreach (Theme::socialNetworks() as $key => $label) : ?>
             <li>

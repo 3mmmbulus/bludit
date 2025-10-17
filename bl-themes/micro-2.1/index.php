@@ -32,7 +32,7 @@
 					<p>
 						<?php echo $site->footer() ?>
 						<br>
-						Powered by <a href="https://www.bludit.com" target="_blank">BLUDIT</a>
+						
 						<?php
 							if (pluginActivated('pluginRSS')) {
 								echo ' - <a href="'.Theme::rssUrl().'" target="_blank">RSS</a>';

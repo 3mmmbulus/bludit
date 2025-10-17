@@ -76,7 +76,7 @@
 		?>
 	</div>
 
-	<footer class="footer"><?php echo $site->footer() ?>. Powered by <a href="https://www.bludit.com" target="_blank" class="link link--light">Bludit</a></footer>
+	<footer class="footer"><?php echo $site->footer() ?>. </footer>
 
 	<!-- JavaScript -->
 	<?php

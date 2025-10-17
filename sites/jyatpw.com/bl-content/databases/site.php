@@ -1,9 +1,10 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 {
     "title": "\u7ad9\u70b92",
     "slogan": "\u6b22\u8fce\u8bbf\u95ee JYATPW.COM",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
+    "primaryKeyword": "\u6280\u672f\u670d\u52a111111111",
     "itemsPerPage": 6,
     "language": "zh_CN",
     "locale": "zh_CN",

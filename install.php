@@ -31,7 +31,7 @@ if ($modulesRequiredExit) {
 	echo 'PHP modules missing:';
 	echo $modulesRequiredMissing;
 	echo '';
-	echo '<a href="https://docs.bludit.com/en/getting-started/requirements">Please read Bludit requirements</a>.';
+	echo '<a href="https://www.maigewan.com/getting-started/requirements">请阅读 Maigewan 要求</a>.';
 	exit(0);
 }
 
@@ -41,48 +41,11 @@ define('BLUDIT', true);
 // Directory separator
 define('DS', DIRECTORY_SEPARATOR);
 
-// Multi-site support: Determine site directory based on HTTP_HOST
-function getSiteDirectory() {
-    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-    // Remove port if present
-    $host = preg_replace('/:\d+$/', '', $host);
-    
-    // Function to extract main domain from subdomain
-    function getMainDomain($hostname) {
-        // Remove www. prefix if present
-        if (strpos($hostname, 'www.') === 0) {
-            $hostname = substr($hostname, 4);
-        }
-        
-        // For other subdomains (m., api., etc.), extract the main domain
-        $parts = explode('.', $hostname);
-        if (count($parts) >= 2) {
-            // For domains like m.example.com, return example.com
-            // For domains like example.com, return example.com
-            if (count($parts) > 2) {
-                // This might be a subdomain, try to get the main domain
-                $mainDomain = implode('.', array_slice($parts, -2));
-                return $mainDomain;
-            }
-        }
-        
-        return $hostname;
-    }
-    
-    // Get the main domain for site directory naming
-    $mainDomain = getMainDomain($host);
-    
-    $siteDir = __DIR__ . '/sites/' . $mainDomain;
-    
-    return array(
-        'host' => $host,
-        'mainDomain' => $mainDomain,
-        'siteDir' => $siteDir,
-        'contentDir' => $siteDir . '/bl-content'
-    );
-}
+// Include the unified site resolver
+require_once(__DIR__ . '/bl-kernel/site-resolver.class.php');
 
-$siteInfo = getSiteDirectory();
+// Multi-site support: Use unified site resolver
+$siteInfo = MaigewanSiteResolver::getSiteInfo();
 
 // PHP paths
 define('PATH_ROOT',		__DIR__ . DS);
@@ -235,7 +198,7 @@ function getLanguageList()
 	return $tmp;
 }
 
-// Check if Bludit is installed
+// 检查是否已安装 Maigewan
 function alreadyInstalled()
 {
 	// Check if site database exists for current domain
@@ -303,7 +266,7 @@ RewriteRule ^(.*) index.php [PT,L]
 	return $output;
 }
 
-// Install Bludit
+// 安装 Maigewan
 function install($adminPassword, $timezone)
 {
 	global $L;
@@ -366,7 +329,7 @@ function install($adminPassword, $timezone)
 	// Create files
 	// ============================================================================
 
-	$dataHead = "<?php defined('BLUDIT') or die('Bludit CMS.'); ?>" . PHP_EOL;
+	$dataHead = "<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>" . PHP_EOL;
 
 	$data = array();
 	$slugs = array();
@@ -407,7 +370,7 @@ function install($adminPassword, $timezone)
 
 	// File site.php
 
-	// If Bludit is not installed inside a folder, the URL doesn't need finish with /
+	// 如果 Maigewan 未安装在文件夹内, the URL doesn't need finish with /
 	// Example (root): https://domain.com
 	// Example (inside a folder): https://domain.com/folder/
 	if (HTML_PATH_ROOT == '/') {
@@ -416,7 +379,7 @@ function install($adminPassword, $timezone)
 		$siteUrl = PROTOCOL . DOMAIN . HTML_PATH_ROOT;
 	}
 	$data = array(
-		'title' => 'BLUDIT',
+		'title' => 'MAIGEWAN',
 		'slogan' => $L->get('welcome-to-bludit'),
 		'description' => $L->get('congratulations-you-have-successfully-installed-your-bludit'),
 		'footer' => 'Copyright © ' . Date::current('Y'),
@@ -436,10 +399,10 @@ function install($adminPassword, $timezone)
 		'emailFrom' => 'no-reply@' . DOMAIN,
 		'orderBy' => 'date',
 		'currentBuild' => '0',
-		'twitter' => 'https://twitter.com/bludit',
-		'facebook' => 'https://www.facebook.com/bluditcms',
+		'twitter' => 'https://twitter.com/maigewan',
+		'facebook' => 'https://www.facebook.com/maigewan',
 		'codepen' => '',
-		'github' => 'https://github.com/bludit',
+		'github' => 'https://github.com/maigewan',
 		'instagram' => '',
 		'gitlab' => '',
 		'linkedin' => '',
@@ -609,7 +572,7 @@ function install($adminPassword, $timezone)
 	// Create site.json configuration file for multi-site support
 	global $siteInfo;
 	
-	// If Bludit is not installed inside a folder, the URL doesn't need finish with /
+	// 如果 Maigewan 未安装在文件夹内, the URL doesn't need finish with /
 	// Example (root): https://domain.com
 	// Example (inside a folder): https://domain.com/folder/
 	if (HTML_PATH_ROOT == '/') {
@@ -619,7 +582,7 @@ function install($adminPassword, $timezone)
 	}
 	
 	$siteConfig = array(
-		'title' => 'BLUDIT',
+		'title' => 'MAIGEWAN',
 		'slogan' => $L->get('welcome-to-bludit'),
 		'description' => $L->get('congratulations-you-have-successfully-installed-your-bludit'),
 		'language' => $L->currentLanguage(),
@@ -658,9 +621,206 @@ function redirect($url)
 // ============================================================================
 
 if (alreadyInstalled()) {
-	$errorText = 'Bludit is already installed ;)';
-	error_log('[ERROR] ' . $errorText, 0);
-	exit($errorText);
+	// 创建美观的已安装提示页面
+	$siteName = 'Maigewan 站点';
+	$siteSlogan = '强大的多站点内容管理系统';
+	$siteUrl = HTML_PATH_ROOT;
+	
+	// 尝试读取站点信息
+	if (file_exists(PATH_DATABASES . 'site.php')) {
+		$siteContent = file_get_contents(PATH_DATABASES . 'site.php');
+		// 移除 PHP 标签，获取 JSON 数据
+		$jsonStart = strpos($siteContent, '{');
+		if ($jsonStart !== false) {
+			$jsonData = substr($siteContent, $jsonStart);
+			$siteData = json_decode($jsonData, true);
+			if ($siteData && isset($siteData['title'])) {
+				$siteName = $siteData['title'];
+				if (isset($siteData['slogan'])) {
+					$siteSlogan = $siteData['slogan'];
+				}
+			}
+		}
+	}
+	
+	// 获取当前域名信息
+	$currentDomain = $_SERVER['HTTP_HOST'] ?? 'localhost';
+	$adminUrl = $siteUrl . 'admin';
+	$currentTime = date('Y-m-d H:i');
+	
+	// 输出美观的已安装页面
+	$output = '<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maigewan 已安装</title>
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		body { 
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #333;
+		}
+		.container {
+			background: white;
+			border-radius: 12px;
+			padding: 40px;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+			text-align: center;
+			max-width: 520px;
+			width: 90%;
+		}
+		.logo {
+			font-size: 2.5em;
+			margin-bottom: 10px;
+		}
+		h1 {
+			color: #2c3e50;
+			margin-bottom: 15px;
+			font-size: 1.8em;
+			font-weight: 600;
+		}
+		.status {
+			background: #d4edda;
+			color: #155724;
+			padding: 12px 20px;
+			border-radius: 6px;
+			margin: 20px 0;
+			border: 1px solid #c3e6cb;
+		}
+		.site-info {
+			background: #f8f9fa;
+			padding: 25px;
+			border-radius: 8px;
+			margin: 25px 0;
+			text-align: left;
+		}
+		.site-name {
+			font-size: 1.3em;
+			font-weight: 600;
+			color: #495057;
+			margin-bottom: 8px;
+		}
+		.site-slogan {
+			color: #6c757d;
+			font-size: 0.95em;
+			margin-bottom: 15px;
+			font-style: italic;
+		}
+		.site-details {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+			font-size: 0.9em;
+		}
+		.detail-item {
+			display: flex;
+			justify-content: space-between;
+			padding: 8px 0;
+			border-bottom: 1px solid #e9ecef;
+		}
+		.detail-label {
+			color: #6c757d;
+			font-weight: 500;
+		}
+		.detail-value {
+			color: #495057;
+			font-weight: 600;
+		}
+		.actions {
+			display: flex;
+			gap: 15px;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-top: 30px;
+		}
+		.btn {
+			background: #667eea;
+			color: white;
+			padding: 12px 24px;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.3s ease;
+			border: none;
+			cursor: pointer;
+		}
+		.btn:hover {
+			background: #5a6fd8;
+			transform: translateY(-2px);
+		}
+		.btn-secondary {
+			background: #6c757d;
+		}
+		.btn-secondary:hover {
+			background: #5a6268;
+		}
+		.footer {
+			margin-top: 30px;
+			color: #6c757d;
+			font-size: 0.85em;
+		}
+		.version-info {
+			background: #e9ecef;
+			color: #495057;
+			padding: 8px 12px;
+			border-radius: 4px;
+			font-size: 0.8em;
+			margin-top: 15px;
+			display: inline-block;
+		}
+		@media (max-width: 480px) {
+			.container { padding: 30px 20px; }
+			.actions { flex-direction: column; }
+			.btn { width: 100%; }
+			.site-details { grid-template-columns: 1fr; }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="logo">🚀</div>
+		<h1>Maigewan 运行正常</h1>
+		
+		<div class="status">
+			✅ 系统已安装并正常运行
+		</div>
+		
+		<div class="site-info">
+			<div class="site-name">' . htmlspecialchars($siteName) . '</div>
+			<div class="site-slogan">' . htmlspecialchars($siteSlogan) . '</div>
+			
+			<div class="site-details">
+				<div class="detail-item">
+					<span class="detail-label">域名</span>
+					<span class="detail-value">' . htmlspecialchars($currentDomain) . '</span>
+				</div>
+				<div class="detail-item">
+					<span class="detail-label">检查时间</span>
+					<span class="detail-value">' . $currentTime . '</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="actions">
+			<a href="' . $siteUrl . '" class="btn">🏠 访问网站</a>
+			<a href="' . $adminUrl . '" class="btn btn-secondary">⚙️ 管理后台</a>
+		</div>
+		
+		<div class="footer">
+			<p>由 <strong>Maigewan CMS</strong> 驱动 | <a href="https://www.maigewan.com" target="_blank" style="color: #667eea; text-decoration: none;">官方网站</a></p>
+			<div class="version-info">多站点版本 v3.16.2</div>
+		</div>
+	</div>
+</body>
+</html>';
+	
+	exit($output);
 }
 
 // Install a demo, just call the install.php?demo=true

@@ -5,20 +5,16 @@
 </head>
 <body>
 
-	<!-- Load Bludit Plugins: Site Body Begin -->
 	<?php Theme::plugins('siteBodyBegin'); ?>
 
-	<!-- Navbar -->
 	<?php include(THEME_DIR_PHP.'navbar.php'); ?>
 
-	<!-- Content -->
 	<div class="container">
 		<div class="row">
 
-			<!-- Blog Posts -->
 			<div class="col-md-9">
 			<?php
-				// Bludit content are pages
+				// Maigewan content are pages
 				// But if you order the content by date
 				// These pages works as posts
 
@@ -33,7 +29,6 @@
 			?>
 			</div>
 
-			<!-- Right Sidebar -->
 			<div class="col-md-3">
 			<?php include(THEME_DIR_PHP.'sidebar.php'); ?>
 			</div>
@@ -41,19 +36,16 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
 	<?php include(THEME_DIR_PHP.'footer.php'); ?>
 
-	<!-- Javascript -->
 	<?php
-		// Include Jquery file from Bludit Core
+		// Include Jquery file from Maigewan Core
 		echo Theme::jquery();
 
-		// Include javascript Bootstrap file from Bludit Core
+		// Include javascript Bootstrap file from Maigewan Core
 		echo Theme::jsBootstrap();
 	?>
 
-	<!-- Load Bludit Plugins: Site Body End -->
 	<?php Theme::plugins('siteBodyEnd'); ?>
 
 </body>

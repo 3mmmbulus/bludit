@@ -1,0 +1,21 @@
+{
+    "theme-data":
+    {
+        "name": "Bootstrap 5 文档主题",
+        "description": "响应式Bootstrap 5主题，用于构建文档网站"
+    },
+    "on-this-page": "本页内容",
+    "navigation": "导航",
+    "more": "更多",
+    "close": "关闭",
+    "back-to-top": "回到顶部",
+    "social-media": "社交媒体",
+    "this-post-is-not-available-at-the-moment": "此文章暂时不可用",
+    "no-pages-found": "未找到页面",
+    "read-more": "阅读更多",
+    "previous": "上一页",
+    "home": "首页",
+    "next": "下一页",
+    "no-title": "(无标题)",
+    "page-navigation": "页面导航"
+}

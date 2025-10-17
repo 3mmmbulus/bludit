@@ -81,7 +81,7 @@
 			</section>
 			
 			<p class="copyright">
-				<?php echo $site->footer(); ?> | Powered by <a target="_blank" href="https://www.bludit.com">Bludit</a>
+				<?php echo $site->footer(); ?> | 
 			</p>
 			
 		</div>

@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('BLUDIT') or die('Maigewan CMS.');
 
 // Start the session
 // If the session is not possible to start the admin area is not available

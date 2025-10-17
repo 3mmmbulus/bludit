@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 
 <?php echo Bootstrap::formOpen(array('id' => 'jsform', 'class' => 'tab-content')); ?>
 
@@ -285,6 +285,17 @@ echo Bootstrap::formInputHidden(array(
 <!-- SEO tab -->
 <div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="seo-tab">
 	<?php
+	echo Bootstrap::formTitle(array('title' => 'SEO 优化'));
+
+	echo Bootstrap::formInputText(array(
+		'name' => 'primaryKeyword',
+		'label' => '主优化词',
+		'value' => $site->primaryKeyword(),
+		'class' => '',
+		'placeholder' => '输入网站主要优化关键词',
+		'tip' => '网站主要优化的关键词，将在多个地方使用以提升SEO效果'
+	));
+
 	echo Bootstrap::formTitle(array('title' => $L->g('Extreme friendly URL')));
 
 	echo Bootstrap::formSelect(array(

@@ -8,6 +8,6 @@
     </div>
     <div class="copyright">
         <?php echo $site->footer(); ?>
-        Powered by <a target="_blank" class="" href="https://www.bludit.com">Bludit</a>
+        
     </div>
 </footer>

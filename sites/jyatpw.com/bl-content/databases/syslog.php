@@ -1,5 +1,13 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 [
+    {
+        "date": "2025-10-17 15:32:43",
+        "dictionaryKey": "settings-changes",
+        "notes": "",
+        "idExecution": "68f1f11b01b16",
+        "method": "POST",
+        "username": "admin"
+    },
     {
         "date": "2025-10-16 22:02:17",
         "dictionaryKey": "new-content-created",
@@ -69,14 +77,6 @@
         "dictionaryKey": "settings-changes",
         "notes": "",
         "idExecution": "68f0fa46705ba",
-        "method": "POST",
-        "username": "admin"
-    },
-    {
-        "date": "2025-10-16 19:43:10",
-        "dictionaryKey": "welcome-to-bludit",
-        "notes": "",
-        "idExecution": "68f0da4e94fb1",
         "method": "POST",
         "username": "admin"
     }

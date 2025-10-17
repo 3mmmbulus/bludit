@@ -5,10 +5,8 @@
 
         <header class="entry-header">
 
-          <!-- Load Bludit Plugins: Page Begin -->
           <?php Theme::plugins('pageBegin'); ?>
           
-          <!-- Cover Image -->
           <?php if ($page->coverImage()) : ?>
             <figure class="cover-image size-large is-resized"><img src="<?php echo $page->coverImage(); ?>" alt="Cover Image" class="wp-image-9" width="100%" height="100%"></figure>
           <?php endif ?>
@@ -26,27 +24,19 @@
             </div>
           <?php endif ?>
 
-          <!-- .entry-meta -->
         </header>
-        <!-- .entry-header -->
 
 
         <div class="entry-summary" itemprop="text">
           <p>
-              <!-- Full content -->
               <?php echo $page->content(); ?>
           </p>
         </div>
-        <!-- .entry-summary -->
 
         <?php Theme::plugins('pageEnd'); ?>
 
-        <!-- .entry-meta -->
       </div>
-      <!-- .inside-article -->
     </article>
-    <!-- #post-## -->
   </main>
-  <!-- #main -->
 </div>
 

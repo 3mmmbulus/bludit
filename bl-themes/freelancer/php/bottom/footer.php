@@ -29,7 +29,7 @@ echo "<div class=footer-box>\n";
 
 // Add the links to the footer.
 echo "<div class=footer-links>\n";
-echo $site->footer()." | Theme by <a href=\"https://pb-soft.com\" target=_blank>PB-Soft</a>\n";
+echo $site->footer()." | \n";
 echo "</div>\n";
 
 // End of the footer box.

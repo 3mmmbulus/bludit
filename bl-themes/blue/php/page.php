@@ -5,9 +5,9 @@
 //                                                                    //
 //                             Blue Theme                             //
 //                                                                    //
-//        A blue, fast and responsive theme for the Bludit CMS.       //
+//        A blue, fast and responsive theme for the Maigewan CMS.       //
 //                                                                    //
-//                       For Bludit version 3.x                       //
+//                       For Maigewan version 3.x                       //
 //                                                                    //
 // ================================================================== //
 //                                                                    //

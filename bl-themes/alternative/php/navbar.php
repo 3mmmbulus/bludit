@@ -10,14 +10,12 @@
 
 			<ul class="navbar-nav ml-auto">
 
-				<!-- Static pages -->
 				<?php foreach ($staticContent as $staticPage): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
 				</li>
 				<?php endforeach ?>
 
-				<!-- Social Networks -->
 				<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo $site->{$key}(); ?>" target="_blank">
@@ -27,7 +25,6 @@
 				</li>
 				<?php endforeach; ?>
 
-				<!-- RSS -->
 				<?php if (Theme::rssUrl()): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo Theme::rssUrl() ?>" target="_blank">

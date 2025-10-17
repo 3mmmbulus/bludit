@@ -19,7 +19,7 @@
 <footer class="footer mt-5">
 	<div class="container-fluid">
 		<p class="m-0 text-center p-1">
-		<?php echo $site->footer(); ?><br/><small><a href="<?php echo Theme::siteUrl(); ?>"><img class="img-fluid" width="20" height="20" alt="<?php echo $site->title(); ?>" src="<?php echo $site->logo(); ?>"/> <?php echo $site->title(); ?></a> develope by <a target="_blank" href="https://www.fiverr.com/creativitas/design-your-website-with-phyton-django">Creativitas</a>
+		<?php echo $site->footer(); ?><br/><small><a href="<?php echo Theme::siteUrl(); ?>"><img class="img-fluid" width="20" height="20" alt="<?php echo $site->title(); ?>" src="<?php echo $site->logo(); ?>"/> <?php echo $site->title(); ?></a> 
 		</small></p>
 	</div>
 </footer>

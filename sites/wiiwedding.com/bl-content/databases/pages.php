@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 {
     "\u8303\u5fb7\u8428\u8303\u5fb7\u8428\u53d1": {
         "title": "\u8303\u5fb7\u8428\u8303\u5fb7\u8428\u53d1",

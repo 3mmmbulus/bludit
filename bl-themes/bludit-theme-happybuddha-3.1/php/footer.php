@@ -2,9 +2,9 @@
   <div class="container site-footer-info-container">
     <div class="row">
       <div class="twelve columns">
-        <a href="https://www.uberspace.de" target="_blank">hosted on asteroids</a> &ndash;
-        <a href="http://www.adfreeblog.org" target="_blank">ad free blog</a> &ndash;
-        <a href="http://www.bludit.com" target="_blank">made with bludit</a> &ndash;
+         &ndash;
+         &ndash;
+         &ndash;
     
         <?php
         // Class name of the plugin

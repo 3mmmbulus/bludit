@@ -29,7 +29,7 @@
             <p><?php echo $site->footer(); ?> <?php echo " " . $site->title(); ?>  </p>
         </div>
         <div class="footerLinks">
-            <p><a href="http://www.pixacura.com" id="FooterDesignedBy">Design by: Pixacura</a></p>
+            <p></p>
         </div>
     </div>
   </div> 

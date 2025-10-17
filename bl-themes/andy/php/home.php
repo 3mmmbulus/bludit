@@ -23,7 +23,7 @@
 
           <header class="entry-header">
 
-            <!-- Load Bludit Plugins: Page Begin -->
+            <!-- Load Maigewan Plugins: Page Begin -->
             <?php Theme::plugins('pageBegin'); ?>
 
             <!-- Cover Image -->
@@ -52,7 +52,7 @@
               <a href="<?php echo $page->permalink(); ?>"><?php echo $L->get('Read more'); ?></a>
             <?php endif ?>
 
-            <!-- Load Bludit Plugins: Page End -->
+            <!-- Load Maigewan Plugins: Page End -->
             <?php Theme::plugins('pageEnd'); ?>
 
           </header>

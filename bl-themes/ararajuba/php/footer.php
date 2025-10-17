@@ -22,5 +22,5 @@ $lnks.='				</ul>
 			if(!$ARARA_PRINT_FOOTER_NETWORKER) $lnks='';
 				
 ?>			<footer id="bottom">
-				<p><?php echo $site->footer(); ?> <span>| <a href="https://themes.bludit.com/">Ararajúba Template</a> | Powered by <a href="https://www.bludit.com"><img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'bluditicon.png'; ?>" />BLUDIT CMS</a></span></p><?php echo $lnks; ?>
+				<p><?php echo $site->footer(); ?> <span>|  | 由 <a href="https://www.maigewan.com"><img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'bluditicon.png'; ?>" />Maigewan CMS</a></span></p><?php echo $lnks; ?>
 			</footer>

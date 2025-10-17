@@ -60,7 +60,7 @@
                 <?php endif; ?>
             <?php endforeach; ?>
             </ul>
-            <p class="copyright text-muted"><?php echo $site->footer() ?> - Powered by <a href="https://www.bludit.com">BLUDIT</a></p>
+            <p class="copyright text-muted"><?php echo $site->footer() ?> - </p>
           </div>
         </div>
       </div>

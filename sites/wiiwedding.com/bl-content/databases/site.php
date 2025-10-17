@@ -1,14 +1,15 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('BLUDIT') or die('Maigewan CMS.'); ?>
 {
     "title": "\u7ad9\u70b9111111111",
     "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
-    "description": "Congratulations you have successfully installed your**Bludit**",
+    "description": "\u6211\u662f\u4e00\u6bb5\u63cf\u8ff0\u5440!!!!||||",
     "footer": "Copyright \u00a9 2025",
+    "primaryKeyword": "\u5a5a\u5e86\u670d\u52a122222",
     "itemsPerPage": 6,
     "language": "zh_CN",
     "locale": "zh_CN",
     "timezone": "Asia\/Shanghai",
-    "theme": "andy",
+    "theme": "fsblogx",
     "adminTheme": "booty",
     "homepage": "",
     "pageNotFound": "",

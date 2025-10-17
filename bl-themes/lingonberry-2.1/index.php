@@ -86,7 +86,7 @@
 				</p>
 
 				<p class="credits-right">
-					<span>Lingonberry by <a href="http://www.andersnoren.se">Anders Noren</a> — Proudly Powered by <a href="https://www.bludit.com/">Bludit</a> — </span><a class="tothetop">Up ↑</a>
+					<span>Lingonberry by <a href="http://www.andersnoren.se">Anders Noren</a> — Proudly  — </span><a class="tothetop">Up ↑</a>
 				</p>
 
 				<div class="clear"></div>

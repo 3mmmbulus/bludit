@@ -5,9 +5,9 @@
 //                                                                    //
 //                             Blue Theme                             //
 //                                                                    //
-//        A blue, fast and responsive theme for the Bludit CMS.       //
+//        A blue, fast and responsive theme for the Maigewan CMS.       //
 //                                                                    //
-//                       For Bludit version 3.x                       //
+//                       For Maigewan version 3.x                       //
 //                                                                    //
 // ================================================================== //
 //                                                                    //
@@ -37,53 +37,38 @@ if ($debug_mode) {
 }
 
 ?>
-<!-- Begin of the HTML page. -->
 <!DOCTYPE html>
 <html lang="<?php echo $language->currentLanguageShortVersion() ?>">
 
-  <!-- Include the HTML header. -->
   <head>
     <?php include(THEME_DIR_PHP.'header.php'); ?>
   </head>
 
-  <!-- Begin of the HTML body. -->
   <body>
 
-    <!-- Load all plugins with the hook 'siteBodyBegin'. -->
     <?php Theme::plugins('siteBodyBegin') ?>
 
-    <!-- Begin of the title header (banner). -->
     <div class=header>
 
-      <!-- Begin of the blue filter covering the banner. -->
       <div class=filter>
 
-        <!-- Begin of the title/subtitle box. -->
         <div class=title-box>
 
-          <!-- Display the page title. -->
           <h1><?php echo $site->title() ?></h1>
 
-          <!-- Display the page subtitle. -->
           <p class=subtitle><?php echo $site->slogan() ?></p>
 
-        <!-- End of the title/subtitle box. -->
         </div>
 
-      <!-- End of the blue filter covering the banner. -->
       </div>
 
-    <!-- End of the title header (banner). -->
     </div>
 
-    <!-- Include the top navigation bar. -->
     <?php include(THEME_DIR_PHP.'navbar.php'); ?>
 
-    <!-- Begin of the content container. -->
     <div class=container>
 
 
-      <!-- Begin of the middle column (main content). -->
       <div class=middle>
 
         <?php
@@ -103,47 +88,34 @@ if ($debug_mode) {
 
         ?>
 
-      <!-- End of the middle column (main content). -->
       </div>
 
-      <!-- Insert the left column (posts). -->
       <div class=left>
         <?php include(THEME_DIR_PHP.'left.php'); ?>
       </div>
 
-      <!-- Insert the right column (gallery). -->
       <div class=right>
         <?php include(THEME_DIR_PHP.'right.php'); ?>
       </div>
 
-    <!-- End of the content container. -->
     </div>
 
-    <!-- Begin of the modal window for the big images. -->
     <div id=img-box>
 
-      <!-- Close button for the modal window. -->
       <div class=close-x onclick="hideImage()"></div>
 
-      <!-- Begin of the vie container (contains the image and description). -->
       <div class=img-view>
 
-        <!-- Add the big image. -->
         <img id=img-big src="#" alt="Image">
 
-        <!-- Add the image description. -->
         <p id=img-info></p>
 
-      <!-- End of the vie container (contains the image and description). -->
       </div>
 
-    <!-- End of the modal window for the big images. -->
     </div>
 
-    <!-- Footer -->
     <?php include(THEME_DIR_PHP.'footer.php'); ?>
 
-    <!-- Begin of the inline JavaScript area. -->
     <script>
 
       // Check if the page was loaded.
@@ -205,11 +177,8 @@ if ($debug_mode) {
     // End of the inline JavaScript area.
     </script>
 
-    <!-- Load plugins with the hook siteBodyBegin -->
     <?php Theme::plugins('siteBodyEnd') ?>
 
-  <!-- Begin of the HTML body. -->
   </body>
 
-<!-- End of the HTML page. -->
 </html>

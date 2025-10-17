@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('BLUDIT') or die('Maigewan CMS.');
 
 echo Bootstrap::pageTitle(array('title'=>$L->g('Categories'), 'icon'=>'tags'));
 

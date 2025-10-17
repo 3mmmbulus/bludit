@@ -78,7 +78,7 @@
 
 		<!-- Copyright -->
 		<div id="copyright">
-			<ul><li><?php echo $site->footer() ?></li><li>Powered by <a href="https://www.bludit.com">Bludit</a></li></ul>
+			<ul><li><?php echo $site->footer() ?></li><li></li></ul>
 		</div>
 
 	</div>
