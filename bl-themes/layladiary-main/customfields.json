@@ -1,0 +1,22 @@
+{
+    "frontPagePrimaryButtonText": {
+        "type": "string",
+        "placeholder": "Text for Primary button"
+    },
+    "frontPagePrimaryButtonUrl": {
+        "type": "string",
+        "placeholder": "URL for Primary button"
+    },
+    "frontPageSecondaryButtonText": {
+        "type": "string",
+        "placeholder": "Text for Secondary button"
+    },
+    "frontPageSecondaryButtonUrl": {
+        "type": "string",
+        "placeholder": "URL for Secondary button"
+    },
+    "frontPageImageUrl": {
+        "type": "string",
+        "placeholder": "URL for Front Image"
+    }
+}

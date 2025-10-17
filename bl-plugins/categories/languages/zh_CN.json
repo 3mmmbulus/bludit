@@ -1,0 +1,7 @@
+{
+    "plugin-data": {
+        "name": "分类",
+        "description": "在侧边栏显示所有分类。"
+    },
+    "hide-categories-without-content": "隐藏无内容的分类"
+}

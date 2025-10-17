@@ -1,0 +1,361 @@
+/* css reset from Vanilla CSS at https://github.com/bradleytaunt/vanilla-css | MIT License | last Update 03/09/2020 */ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}*{box-sizing:border-box}:root{--desktop-font-size:1.3rem/1.5;--mobile-font-size:1.1rem/1.4;--text-color:#2d2d2d;--link-color:blue;--primary-color:#999;--secondary-color:#f5f5f5;--tertiary-color:whitesmoke}body{color:var(--text-color);font:var(--desktop-font-size) -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}blockquote,dl,figure,h1,h2,h3,h4,h5,h6,img,p{margin:2rem 0}h1,h2,h3,h4,h5,h6{font-weight:700}h1{font-size:200%}h2{font-size:150%}h3{font-size:120%}h4,h5,h6{font-size:100%}h5,h6{text-transform:uppercase}header h1{border-bottom:1px solid}p{margin:2rem 0}a,a:visited{color:var(--link-color)}b,strong,time{font-weight:700}dfn,em,i{font-style:italic}sub{font-size:60%;vertical-align:bottom}small{font-size:80%}blockquote,q{background:var(--secondary-color);border-left:10px solid var(--primary-color);font-family:Georgia,serif;padding:1rem}blockquote p:first-child{margin-top:0}cite{font-family:Georgia,serif;font-style:italic;font-weight:700}code,kbd,pre,samp,var{font-family:monospace;font-weight:700}code,pre{background:var(--tertiary-color);padding:.5rem 1rem}code pre,pre code{padding:0}hr{background:var(--text-color);border:0;height:1px;margin:4rem 0}img{max-width:100%}figure{border:1px solid var(--primary-color);display:inline-block;padding:1rem;width:auto}figure img{margin:0}figure figcaption{font-size:80%}ol,ul{margin:2rem 0;padding:0 0 0 4rem}dl dd{padding-left:2rem}table{border:1px solid var(--primary-color);border-collapse:collapse;table-layout:fixed;width:100%}table caption{margin:2rem 0}table thead{text-align:center}table tbody{text-align:right}table tr{border-bottom:1px solid var(--primary-color)}table tbody tr:nth-child(even){background:var(--tertiary-color)}table th{background:var(--secondary-color);font-weight:700}table td,table th{padding:1rem}table td:not(last-of-type),table th:not(last-of-type){border-right:1px solid var(--primary-color)}input{border:1px solid var(--text-color);padding:.8rem}input:active,input:focus{background-color:var(--secondary-color);border-color:var(--link-color)}@media screen and (max-width:50rem){body{font:var(--mobile-font-size) -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}table{table-layout:auto}}
+
+div#container
+{
+	margin:12px auto 0 auto;
+	width:1000px;
+	display:grid;	
+	grid-template-columns:repeat(2, 1fr);
+	grid-template-columns:22% auto;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows:140px auto auto 10px;
+	grid-column-gap:0px;
+	grid-row-gap:0px; 
+}
+
+h1,h2,h3,h4,h5,h6 {border-bottom:0 !important;}
+hr {margin:10px 0;border:1px double #f5f5f5}
+input:focus, input:active { background-color:#ffe; border-color: #000 !important; }
+input {font-size:0.8rem;width:100%;padding:4px}
+.msginfo {}
+.msginfo h1 {text-transform:uppercase;border-bottom:1px double #bbb !important;display:inline-block;font-size:1rem !important;margin-bottom:1rem}
+.msginfo p {margin:0 !important}
+blockquote {margin:20px 30px}
+
+/* INI - classes css to use in your code editor */
+main article img.left, main article img.right {margin:1rem}
+main article img.left {float:left;margin-left:0}
+main article img.right {float:right;margin-right:0}
+main article img.center {display:block;margin:auto}
+.w25 {width:25%}
+.w50 {width:55%}
+.w75 {width:75%}
+.border {border:var(--border-line); border-color:#999}
+.bg {background-color:var(--bg-color)}
+.opacity {filter:opacity(50%)}
+.grayscale {filter:grayscale(50%)}
+/* END */ 
+
+header#top
+{
+	grid-area:1 / 1 / 2 / 3;
+	border-bottom:1px double #ddd;	
+	background-color:#f5f5f5
+}
+
+img#logo
+{
+	margin:13px;
+	width:200px;
+	height:100px;
+	border:1px double #bbb
+}
+
+header#top #header-logo {display:flex;}
+header#top #header-logo a {position:relative;top:-20px}
+header#top #header-desc {margin-top:-105px;margin-left:250px}
+header#top #header-logo h1 {font-size:1.6rem;margin-left:2rem}
+header#top #header-desc h2 {font-size:1rem;margin:30px}
+header#top #header-desc p.sitedesc {font-size:0.8rem;margin-top:-26px;margin-left:80px;width:80%}
+
+aside
+{
+	grid-area: 2 / 1 / 3 / 2;		
+	border-right:1px double #f5f5f5;	
+	margin-top:20px
+}
+
+aside > div {border-top:1px double #f5f5f5 !important;padding:20px;margin:0 auto}
+aside > div:first-of-type {border-top:0 !important}
+aside h2.plugin-label {text-transform:uppercase;font-size:1rem;margin:0px 0 10px 0px}
+aside div.plugin-content {font-size:0.78rem}
+aside ul {list-style:none;margin:0;padding:0 10px}
+aside ul li {margin-top:8px}
+
+aside div.plugin-search input[type=button] {border:#bbb outset 1px !important;margin-top:5px;background-color:#f5f5f5}
+aside div.plugin-search input[type=text] {border-color:#bbb}
+
+/*plugin cloud*/
+aside div.plugin-tags div.plugin-content div > a {padding:0.3rem;background:#f5f5f5;margin:0.1rem;display:inline-block}
+
+aside div.plugin-tags ul li a{} /* tag normal */
+aside div .plugin-content ul {margin:0;padding:0px}
+aside div .plugin-content ul li a {text-decoration:none;color:#888;width:100%;display:block}
+aside div .plugin-content ul li:hover a {text-shadow:1px 0px 1px #ddd}
+
+aside .plugin-hit-counter div.counter {padding:5px 10px;background-color:#f5f5f5;max-width:80px;border-radius:6px}
+aside .plugin-hit-counter ul {margin:0;padding:0;font-size:0.78rem;color:#777}
+aside div.plugin-about {color:#777}
+aside div.plugin-about h2 {color:#444}
+aside .plugin-navigation .year,
+aside .plugin-navigation .month {border-left:1rem #f5f5f5 solid;padding-left:0.4rem;margin-bottom:-0.6rem}
+aside .plugin-navigation .month {font-style:italic;border-left-width:2rem;margin-top:0.7rem} 
+
+main#content
+{
+	grid-area: 2 / 2 / 3 / 3;
+	padding:0px 30px 0 30px;
+	font-size:0.8rem
+}
+
+main#content p
+{
+	padding:0;
+	margin:10px 0
+}
+
+#cont-art img {margin:10px}
+nav.paginator {margin-top:20px;border-top:1px double #f5f5f5 !important;}
+nav.paginator ul {list-style-type: none;padding:0;margin:5px}
+nav.paginator ul li {display:inline-block;background-color:#f5f5f5;padding:4px}
+nav.paginator ul li a {text-decoration:none}
+nav.paginator ul li a:hover {color:blueviolet}
+nav.paginator ul li.disabled a {pointer-events:none;color:#bbb}
+nav.paginator .numberpages a {margin:0 4px}
+
+#featured-content {border:0px double #eee;padding:0px;height:236px;margin-top:20px !important}
+#featured-content header {border-bottom:1px double #eee !important;margin-bottom:-24px;;background-color:#eee;padding: 0 10px}
+#featured-content h2 {margin:0 !important;padding:0 !important;color:#444;text-transform:uppercase;font-size:1rem !important;}
+#featured-content figcaption {height:70px;overflow:hidden;background-color:#f5f5f5;padding:5px}
+#featured-content > figure {max-width:236px;display:inline-block;
+	border-width:0 !important;padding:0.4rem}
+#featured-content img {width:236px;height:120px;opacity:0.7;background:#bbb}
+#featured-content img:hover {opacity:1}
+
+article code
+{
+	padding:2px;
+	background-color:#fff;
+	font-weight:normal;
+	font-size:small
+}
+
+#articles article {}
+#articles article h2 {background-color:#eee;padding:4px;font-size:1.2em}
+#articles article h2 a {text-decoration:none;color:#444}
+#articles article h2 a:hover {color:#00e}
+#articles article header p {margin:-20px 0 0 10px;color:#bbb}
+#articles article div.data-entry {display:grid;grid-template-columns:35% auto;}
+#articles article div.data-entry p {padding-right:10px}
+#articles article div.data-entry p a {display:block;padding:10px 0;width:80px}
+#articles article img.thumb {width:226px;height:120px;margin:10px;background:#ccc}
+#articles article img.thumb:hover {transform: scale(1.01)}
+
+section#page {}
+section#page article {}
+section#page article header {}
+section#page article header h2 {margin:20px 0 0 0;border-bottom:1px double #f5f5f5 !important}
+section#page article header p {background-color:#f5f5f5 !important;padding:10px;color:#777}
+section#page article header time {font-weight:normal}
+section#page article header p span {display:block;color:#bbb;padding-top:5px}
+section#page article header img {margin:0;padding:0;width:99.9%;max-width:100%;max-height:300px;border:1px double #bbb}
+section#page article footer {margin-top:30px;border-top:1px double #f5f5f5;padding:10px;font-size:0.9em}
+section#page article footer a {margin:4px}
+section#page article footer p {margin:10px 0}
+article form {background-color:#f5f5f5;padding:0.5rem}
+article form input, article form textarea, article form button {width:100%;border:1px double #bbb;margin:0.1rem 0}
+article form.contact3 {margin-top:-1rem}
+article form.contact3 .form-check {margin:1rem}
+article form.contact3 .form-check label {width:80%;display:inline-block;margin:}
+article form.contact3 .form-check input {display:inline-block;width:0.8rem}
+article form button, article form input[type=button], article form input[type=submit] {border:1px outset #bbb;padding:0.1rem;color:#999}
+.comment-article .comment-captcha img {margin-top:-0.12rem !important;}
+
+
+footer#bottom
+{
+  grid-area: 3 / 1 / 4 / 3;  
+  padding:10px;
+	margin-top:20px;
+	border-top:1px double #f5f5f5
+}
+
+footer#bottom ul.socialnet {padding:0;list-style:none;
+margin-right:0.6rem;margin-top:-2rem;text-align:center}
+footer#bottom ul.socialnet li {display:inline-block;font-size:0.5em}
+
+footer#bottom p
+{
+	padding:0;
+	text-align:center;
+	font-size:0.8rem;
+	margin-top:0;
+	line-height:1.6rem
+}
+
+footer#bottom p img 
+{
+	vertical-align:middle;
+	margin-left:-4px;
+	height:20px
+}
+
+ footer#bottom p img {margin:0}  
+
+@media (min-width: 768px) and (max-width:999px) {
+	div#container
+	{
+		margin:0;
+		width:auto;
+	}
+	
+  #featured-content
+	{
+		height:auto;
+		margin-top:20px;		
+		width:auto
+	}
+	
+  #featured-content header 
+	{
+		border-bottom:1px double #eee;
+		padding: 0 10px
+	}  
+
+  #featured-content figure
+	{
+		max-width:auto;
+	  display:inline-block;
+		margin:0px;
+		padding:2px;
+	}
+	
+	#featured-content figure:first-of-type {margin-top:30px}	
+  #articles article div.data-entry {display:grid;grid-template-columns:auto auto}
+	#articles article div.data-entry p {margin-left:20px}
+}
+
+@media (min-width: 481px) and (max-width: 767px)
+{
+
+	div#container
+	{
+		margin:0 auto 0 auto;
+		width:100%;
+		grid-template-columns:36% auto;
+		grid-template-rows:auto auto auto 10px;
+	}
+	
+  header#top
+	{
+		grid-area:auto auto;
+		border-bottom:1px double #ddd;	
+		background-color:#f5f5f5;
+		height:auto;min-height:auto;
+		width:100%
+	}
+  
+	header#top #header-logo {width:37% !important;height:auto}
+	header#top #header-logo h1 {height:20px;margin-left:0.4rem;min-width:20rem}
+	header#top #header-logo #logo {}	
+	
+	header#top #header-desc {width:58%;margin:-4.5rem 0rem 1rem 240px}
+	header#top #header-desc h2 {margin:10px auto;width:auto;height:auto}	
+	header#top #header-desc p.sitedesc {margin:auto 10px !important}	
+	
+	#featured-content {height:auto;width:100%}
+	
+	#featured-content figure {display:block;width:auto;height:auto !important;
+		                        min-width:100% !important;
+		                        min-height:100% !important;		
+		                        margin-bottom:-20px
+	}		
+	
+	#featured-content figure figcaption {}
+	
+	#featured-content figure img {height:auto;min-width:100%;min-height:100%}
+	
+	#articles article div.data-entry {
+		                                display:block;
+		                                grid-template-columns:1fr;
+		                                min-height:100% !important;
+	                                 }
+	
+	main#content article img
+	{
+		min-width:95%;
+		min-height:95%;		
+		height:100% !important;
+	}
+  
+	main#content section#articles img {display:block;min-height:10rem;width:auto;
+		height:0!important;}
+}
+
+@media (max-width: 480px)
+{
+  
+  div#container
+	{
+		margin:0;
+		width:100%;
+		display:block;	
+		grid-template-columns:1fr;		
+		grid-template-rows:1fr;		
+		grid-column-gap:0px;
+		grid-row-gap:0px; 
+	}
+
+	header#top
+	{
+		grid-area:auto;
+		border-bottom:1px double #ddd;	
+		background-color:#f5f5f5;
+		height:auto;
+	}
+
+	header#top #header-logo #logo {width:92%;height:100%}
+	header#top #header-logo {display:block;width:100%;height:100%}	
+	header#top #header-desc {margin:auto;margin-top:-20px}			
+	header#top #header-desc p.sitedesc {margin:-10px auto 20px auto;padding:0 !important;}
+	
+	aside
+	{
+		grid-area: auto;		
+		border-right:1px double #f5f5f5;	
+		margin-top:20px
+	}
+	
+	#featured-content {height:auto;width:100%}
+	
+	#featured-content figure {display:block;width:auto;
+		                        height:auto !important;
+		                        min-width:100% !important;
+		                        min-height:100% !important;
+		                        margin-bottom:-20px
+	}		
+	
+	#featured-content figure figcaption {}
+	
+	#featured-content figure img {height:auto;min-width:100%;min-height:100%}
+	
+	#articles article div.data-entry {
+		                                display:block;
+		                                grid-template-columns:1fr;
+		                                min-height:100% !important;
+	                                 }
+	
+	article blockquote {margin:0.1rem !important;}
+	#articles article p {margin:0 0.7rem}
+	main#content section#articles img {display:block;min-height:10rem;width:auto;
+		max-height:20rem !important;}
+	
+	main#content
+	{
+		grid-area:auto;		
+		padding:0px 4px 0 4px;
+		font-size:0.8rem
+	}
+
+	main#content article img
+	{
+		min-width:95%;
+		min-height:95%;
+		height:100% !important;
+	}
+	
+	footer#bottom	{	grid-area:auto;margin-top:2rem;width:98%}
+	footer#bottom p {margin-top:0;line-height:1.6rem}
+	footer#bottom p img {margin:0}
+  footer#bottom ul.socialnet {margin-right:0.6rem;margin-top:-2rem }
+}

@@ -1,0 +1,30 @@
+{
+	"theme-data":
+	{
+		"name": "Ararajuba",
+		"description": "White and gray simple theme with 2 columns (sidebar and main) responsive, featured content, pagination by number and name."
+	},
+    "home": "Home",
+    "previous": "Previous",
+    "next": "Next",
+    "no-pages-found": "No pages found !",
+    "date-published": "Date published ",
+    "name-author": "Author ",
+    "footer-email-message": "If you prefer send us a message by your email client",
+    "article-title": "Articles",
+    "category-result-text":"Results of category ",
+    "tag-result-text":"Results of tag ",
+    "search-result-text":"Search Results ",		
+	"none-search-result":"Your query return nothing, please try another word !",
+	"nothing-to-show-here":"Nothing to show here !",	
+    "searchbox-placeholder":"Type and press enter ",
+    "plugin-need-activate-message-err": "Please enable plugin ",
+    "related-posts":"Related Posts",
+    "hitcounter-plus-label": "Total Counter",
+    "share-whatsapp-text": "Hello guys, read that awesome article at - ",
+    "share-text": "Share this: ",
+	"error-no-content": "No content",
+	"none-content-to-appear": "None content to appear here !",
+	"featured-content-header": "Featured Content",
+	"pagination-text":"Old Content: "
+}

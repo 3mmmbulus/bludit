@@ -1,0 +1,9 @@
+{
+    "plugin-data": {
+        "name": "导航菜单",
+        "description": "在侧边栏显示带有父子页面的导航菜单。"
+    },
+    "home-link": "首页链接",
+    "show-the-home-link-on-the-sidebar": "在侧边栏显示首页链接。",
+    "amount-of-items": "项目数量"
+}

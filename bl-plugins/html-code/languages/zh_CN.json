@@ -1,0 +1,9 @@
+{
+    "plugin-data": {
+        "name": "HTML代码",
+        "description": "在页面中插入自定义HTML代码。"
+    },
+    "html-code-in-head": "head标签中的HTML代码",
+    "html-code-in-sidebar": "侧边栏中的HTML代码",
+    "html-code-in-footer": "页脚中的HTML代码"
+}

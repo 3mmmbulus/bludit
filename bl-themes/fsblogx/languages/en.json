@@ -1,0 +1,12 @@
+{
+	"theme-data":
+	{
+		"name": "FS Blog X",
+		"description": "Customized version of the default 'Blog X' theme with lot of improvements and a set of settings in init.php file. Theme with two columns (content and sidebar), responsive with or without fixed top menu."
+	},
+	"list-pages-written-by":"List of pages written by",
+	"pagination-text":"Old posts: ",
+	"list-categories-text":"Results of category",
+	"list-search-text":"Search results for the term ",
+	"list-tags-text":"Results of tag"
+}

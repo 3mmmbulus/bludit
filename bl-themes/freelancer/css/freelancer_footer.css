@@ -1,0 +1,107 @@
+/* ----0--9--8--7--6--5--4--3--2--1--1--2--3--4--5--6--7--8--9--0---- //
+// ================================================================== //
+//                                                                    //
+//                          Freelancer Theme                          //
+//                                                                    //
+//         A fast and responsive Bludit theme for freelancers.        //
+//                                                                    //
+//                       For Bludit version 3.x                       //
+//                                                                    //
+// ================================================================== //
+//                                                                    //
+//                      Version 3.0 / 03.07.2019                      //
+//                                                                    //
+//                      Copyright 2019 - PB-Soft                      //
+//                                                                    //
+//                         https://pb-soft.com                        //
+//                                                                    //
+//                           Patrick Biegel                           //
+//                                                                    //
+// ================================================================== */
+
+h2 {
+  font-size: 1em;
+}
+
+.sticky {
+  background-color: rgba(64, 94, 130, 0.8);
+  border-bottom: 1px solid #416490;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.sticky > ul > li > a {
+  color: #bde0ff;
+}
+
+.sticky > a > i {
+  border: solid rgba(189,224,255,.6);
+  border-width: 0 4px 4px 0;
+}
+
+#jump-top {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 4;
+  border: none;
+  outline: none;
+  background-color: rgba(64, 94, 130, 0.8);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#jump-top:hover {
+  background-color: rgba(12, 32, 56, 0.8);
+}
+
+.arrow-top {
+  border: solid rgba(189,224,255,.6);
+  border-width: 0 4px 4px 0;
+  float: right;
+  margin: 5px 5px 0 5px;
+  padding: 8px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.footer-box {
+  background-color: #b3c7e0;
+  height: 40px;
+  text-align: center;
+}
+
+.footer-links {
+  font-size: 14px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 600px){
+
+  #jump-top {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .title-link {
+    color: #bde0ff;
+    float: left;
+    font-weight: bold;
+    line-height: 45px;
+    margin-left: 12px;
+  }
+
+  .sticky {
+    box-shadow: none;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .bar-open {
+    background-color: #405e82;
+  }
+}

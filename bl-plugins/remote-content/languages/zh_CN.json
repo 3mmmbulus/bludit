@@ -1,0 +1,6 @@
+{
+    "plugin-data": {
+        "name": "远程内容",
+        "description": "从远程URL获取和显示内容。"
+    }
+}

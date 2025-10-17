@@ -1,0 +1,6 @@
+{
+    "plugin-data": {
+        "name": "OpenGraph",
+        "description": "为页面添加OpenGraph元标签，优化社交媒体分享。"
+    }
+}

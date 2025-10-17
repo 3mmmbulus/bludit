@@ -1,0 +1,6 @@
+{
+    "plugin-data": {
+        "name": "Robots.txt",
+        "description": "生成robots.txt文件来指导搜索引擎爬虫。"
+    }
+}

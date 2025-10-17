@@ -5,10 +5,10 @@
         "description": "",
         "template": "",
         "list": [
-            "example-page-1-slug",
-            "example-page-2-slug",
-            "example-page-3-slug",
-            "example-page-4-slug"
+            "create-your-own-content",
+            "set-up-your-new-site",
+            "follow-bludit",
+            "about"
         ]
     },
     "music": {

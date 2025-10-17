@@ -1,0 +1,6 @@
+{
+    "plugin-data": {
+        "name": "访问计数器",
+        "description": "统计和显示页面访问次数。"
+    }
+}

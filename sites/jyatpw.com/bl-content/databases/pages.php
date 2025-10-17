@@ -1,5 +1,27 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
+    "2222222222222222": {
+        "title": "2222222222222222",
+        "description": "",
+        "username": "admin",
+        "tags": [],
+        "type": "published",
+        "date": "2025-10-16 22:02:07",
+        "dateModified": "",
+        "position": 2,
+        "coverImage": "",
+        "category": "",
+        "md5file": "559ed1bedd589668e00a61146f6097f7",
+        "uuid": "458e913ade6f43caec5e47a29e6c73e4",
+        "allowComments": true,
+        "template": "",
+        "noindex": false,
+        "nofollow": false,
+        "noarchive": false,
+        "custom": [
+            false
+        ]
+    },
     "create-your-own-content": {
         "title": "Create your own content",
         "description": "",

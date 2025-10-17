@@ -1,0 +1,10 @@
+{
+    "plugin-data": {
+        "name": "TinyMCE编辑器",
+        "description": "用于格式化内容的HTML编辑器。推荐给不想使用Markdown代码的用户。"
+    },
+    "toolbar-top": "顶部工具栏",
+    "toolbar-bottom": "底部工具栏",
+    "codesample-languages": "代码示例语言",
+    "codesample-supported-laguages": "Prism支持的编程语言。"
+}

@@ -1,0 +1,69 @@
+/*!
+Perfect Mother Fucking Website v1.0.0 with a minimal things for links
+changes 2020 by cblte <https://github.com/cblte/bludit-theme-pmfws>
+
+Licensed under the WTFPL License.
+https://de.wikipedia.org/wiki/WTFPL
+
+Inspired by
+- http://motherfuckingwebsite.com/
+- http://bettermotherfuckingwebsite.com/
+- https://perfectmotherfuckingwebsite.com/
+- https://thebestmotherfucking.website
+*/
+
+html {
+  overflow-y: scroll; /* hack by https://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/ */
+}
+
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+    font: 1.125em/1.5 'Avenir Next', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #30302F;
+    background-color: #F4F4F2;
+}
+
+/* BLOCK STYLES */ 
+header {
+  margin: auto;
+  display: block;
+}
+
+main {
+  display: block;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+footer {
+  display: block;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2
+  
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+a, a:visited {
+  color: #1253A4;
+}
+
+a:hover {
+  color: #F26964;
+}
+
+/* LOOKING GOOD */

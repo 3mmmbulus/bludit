@@ -1,0 +1,12 @@
+{
+	"theme-data":
+	{
+		"name": "FS Blog X",
+		"description": "Versão personalizada do tema padrão 'Blog X' com muitas melhorias e um conjunto de configurações no arquivo init.php. Tema com duas colunas (conteúdo e barra lateral), responsivo com ou sem menu superior fixo."
+	},
+	"list-pages-written-by":"Páginas escritas por",
+	"pagination-text":"Postagens antigas: ",
+	"list-categories-text":"Listagem com a categoria",
+	"list-search-text":"Resultados da busca pelo termo",
+	"list-tags-text":"Listagem com a tag"
+}

@@ -1,0 +1,34 @@
+{
+	"bdaTheme": {
+		"package": "Booty Dark Admin (BDA) Theme",
+		"versionAlert": 0,
+		"version": "1.1.6",
+		"build": "3150",
+		"releaseDate": "2023-12-16",
+		"downloadLink": "https:\/\/github.com\/tompidev\/booty-dark-admin-theme\/releases",
+		"downloadMirrorLink": "",
+		"changelogLink": "https:\/\/github.com\/tompidev\/booty-dark-admin-theme\/releases",
+		"github": "https:\/\/github.com\/tompidev",
+		"blog": "",
+		"changelog": [
+			{
+				"action": "Improvements",
+				"items": [
+					"-"
+				]
+			},
+			{
+				"action": "Fixes",
+				"items": [
+					"Updated Navbar - Display Plugins list in Mobile Menu"
+				]
+			},
+			{
+				"action": "Known issues",
+				"items": [
+					"-"
+				]
+			}
+		]
+	}
+}

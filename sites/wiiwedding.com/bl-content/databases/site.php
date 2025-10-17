@@ -1,6 +1,6 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "\u8fd9\u662fwiiwedding\u521d\u59cb\u5316",
+    "title": "\u7ad9\u70b9111111111",
     "slogan": "\u6b22\u8fce\u4f7f\u7528Bludit",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
@@ -8,7 +8,7 @@
     "language": "zh_CN",
     "locale": "zh_CN",
     "timezone": "Asia\/Shanghai",
-    "theme": "blogx",
+    "theme": "andy",
     "adminTheme": "booty",
     "homepage": "",
     "pageNotFound": "",
@@ -37,5 +37,13 @@
     "titleFormatCategory": "{{category-name}} | {{site-title}}",
     "titleFormatTag": "{{tag-name}} | {{site-title}}",
     "imageRestrict": true,
-    "imageRelativeToAbsolute": false
+    "imageRelativeToAbsolute": false,
+    "mastodon": "",
+    "dribbble": "",
+    "vk": "",
+    "thumbnailWidth": 400,
+    "thumbnailHeight": 400,
+    "thumbnailQuality": 100,
+    "markdownParser": true,
+    "customFields": "[]"
 }

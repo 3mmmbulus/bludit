@@ -1,0 +1,9 @@
+{
+    "plugin-data": {
+        "name": "标签",
+        "description": "为页面添加标签功能。"
+    },
+    "tags": "标签",
+    "add-tags": "添加标签",
+    "tags-separated-by-commas": "标签用逗号分隔"
+}

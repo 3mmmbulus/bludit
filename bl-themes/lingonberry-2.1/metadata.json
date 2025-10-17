@@ -1,0 +1,10 @@
+{
+	"author": "Anders Norén",
+	"email": "anders@andersnoren.se",
+	"website": "http://www.andersnoren.se",
+	"version": "2.1",
+	"releaseDate": "2019-10-20",
+	"license": "GPL V2",
+	"compatible": "3.0",
+	"notes": "Ported to Bludit by Hakim Zulkufli (@acrox999), updated for Bludit 3.x.x by Clickwork."
+}

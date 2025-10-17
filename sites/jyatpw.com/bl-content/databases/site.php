@@ -1,7 +1,7 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
-    "title": "JYATPW.COM",
-    "slogan": "欢迎访问 JYATPW.COM",
+    "title": "\u7ad9\u70b92",
+    "slogan": "\u6b22\u8fce\u8bbf\u95ee JYATPW.COM",
     "description": "Congratulations you have successfully installed your**Bludit**",
     "footer": "Copyright \u00a9 2025",
     "itemsPerPage": 6,
@@ -19,7 +19,7 @@
     "url": "https:\/\/jyatpw.com",
     "emailFrom": "no-reply@jyatpw.com",
     "orderBy": "date",
-    "currentBuild": "0",
+    "currentBuild": 20240806,
     "twitter": "https:\/\/twitter.com\/bludit",
     "facebook": "https:\/\/www.facebook.com\/bluditcms",
     "codepen": "",
@@ -37,5 +37,13 @@
     "titleFormatCategory": "{{category-name}} | {{site-title}}",
     "titleFormatTag": "{{tag-name}} | {{site-title}}",
     "imageRestrict": true,
-    "imageRelativeToAbsolute": false
+    "imageRelativeToAbsolute": false,
+    "mastodon": "",
+    "dribbble": "",
+    "vk": "",
+    "thumbnailWidth": 400,
+    "thumbnailHeight": 400,
+    "thumbnailQuality": 100,
+    "markdownParser": true,
+    "customFields": "[]"
 }

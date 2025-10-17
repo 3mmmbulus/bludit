@@ -1,0 +1,282 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Padding top for navbar */
+	padding-top: 56px;
+	/* Margin bottom for footer height */
+	margin-bottom: 60px;
+}
+
+section {
+	padding: 150px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+pre, code {
+	background: #f8f8f8;
+	color: #333;
+}
+
+pre {
+	border-left: 2px solid #ccc;
+	padding: 10px;
+}
+
+code {
+	display: inline-block;
+	padding: 0 0.5em;
+	line-height: 1.4em;
+	border-radius: 3px;
+}
+
+table {
+	empty-cells: show;
+	border: 1px solid #cbcbcb;
+	width: 100%;
+	font-size: 0.9em;
+	margin-bottom: 1rem;
+}
+
+thead {
+	background-color: #e0e0e0;
+	color: #000;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+th, td {
+	padding: 0.5em 1em;
+}
+
+h1.title,
+h2.title {
+	font-size: 2.3rem;
+}
+
+blockquote {
+        padding: 10px 20px;
+        margin: 0 0 20px 20px;
+        border-left: 5px solid #eee;
+        font-style: italic;
+}
+
+/* Navbar */
+img.nav-svg-icon {
+	width: 1rem;
+	height: 1rem;
+	padding-bottom: 2px;
+}
+
+.nav-link {
+	font-size: 0.8em;
+}
+
+/* Footer */
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 0.8em;
+}
+
+.mini-logo {
+	height: 22px;
+	padding-bottom: 5px;
+}
+
+/* Plugins */
+.plugin {
+	margin-top: 3rem;
+}
+
+.plugin-label {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.plugin ul {
+	list-style: none;
+	padding: 0 0 0 10px;
+}
+
+/* CUSTOM CSS START HERE */
+
+/* INI - classes css to use in your code editor */
+.content img.left, main article img.right {margin:1rem}
+.content img.left {float:left;margin-left:0}
+.content img.right {float:right;margin-right:0}
+.content img.center {display:block;margin:auto}
+
+.w25 {width:25%}
+.w50 {width:55%}
+.w75 {width:75%}
+
+/* END */ 
+
+nav#navprin {background-color:brown;border-bottom:5px solid burlywood}
+nav#navprin a {color:white;font-size:0.7rem;}
+nav#navprin h1 {padding:1rem;margin:0;background-color:a;text-shadow:1px 1px 1px red;border-radius:5px}
+nav#navprin h1 a {font-size:2rem}
+nav#navprin.nofixed {margin:-3.5rem 0 -3rem 0 !important}
+
+li.dropdown {padding:8px}	
+li.dropdown .dropdown-toggle {display:block}
+li.dropdown .dropdown-menu {background-color:darkred;border-radius:0}	
+li.dropdown .dropdown-menu li a span.d-sm-none {display:inline !important;text-transform:lowercase;margin-left:5px;color:#eee;font-weight:bold}
+li.dropdown .dropdown-menu li a img {display:inline !important}
+
+.banner-entry {margin-bottom:-3rem;margin-top:4rem}
+ h2.lpagesbyadm,h2.lpagesbycat,.lpagesbysearch,.lpagesbytags {margin-top:2rem;padding:0.5rem 0.5rem;color:antiquewhite;background-color:burlywood}
+ h2.lpagesbyadm span,h2.lpagesbycat span,.lpagesbysearch span,.lpagesbytags span {display:block;margin-top:1rem;font-size:small}
+
+.notfound {background-color:brown;padding:1rem;color:#ffb;margin-top:2rem !important;font-size:2rem;}
+.content,.csidebar {margin-top:2rem}
+.content .articles {padding:0px;border-radius:0;font-size:0.8rem;color:#555;
+	margin-bottom:-40px !important;}
+
+.content .articles img {border-bottom:10px solid antiquewhite}
+.content .articles img:hover {filter:sepia(0.1)}
+.content .articles h2 {font-size:1.6rem;padding:1rem 0;color:burlywood}
+.content .articles a.artlink:hover {text-decoration-color:antiquewhite;}
+.content .articles p.rtime {background-color:antiquewhite;padding:5px;color:burlywood !important;}
+.content .articles p.rtime a.authrs {color:brown}
+.content .articles .contbreak {padding:0;margin-bottom:0.5rem}
+.content .articles .readmore {float:right;background-color:burlywood;padding:5px;display:inline-block;color:antiquewhite}
+
+.content .featured > .row {margin:-1rem 0rem 0 0;padding:1rem 0;background-color:#f5f3f0}
+.content .featured > .row  p.rtime { background-color:#fff}
+.content .featured > .row  img  {border-bottom:10px solid burlywood}
+
+.content .page {border-radius:0;font-size:0.8rem;color:#777}
+.content .page img.cover {border-top:1rem solid antiquewhite;border-bottom:1rem solid burlywood}
+.content .page a h2.title {color:#777;font-size:1.6rem;background-color:antiquewhite;color:brown;padding:1rem;margin-top:-1rem}
+.content .page a {text-decoration:none}
+.content .page .rtime {color:#ddd !important;background-color:brown;filter:opacity(0.7);padding:0.5rem;margin-top:-0.5rem}
+.content .page .description {margin:0 0 1rem 0;color:burlywood !important;background-color:#f5f3f0;padding:0.5rem}
+.content .page .pcontent {margin:0 1rem}
+
+.content .static h2 {border-bottom:1rem solid brown; filter:opacity(0.7);margin-bottom:1rem}
+
+.content .page .fs-search h2 {background-color:burlywood;margin:-4rem -1rem 1rem -1rem;padding:0.2rem;color:blanchedalmond}
+
+.bodybegin .fs-search,.bodyend .fs-search {width:100%;background-color:antiquewhite;margin:-1rem 0 -3rem 0;padding:1rem}
+.bodybegin .fs-search .plugin-search,.bodyend .fs-search .plugin-search {text-align:center;padding:0}
+.bodybegin .fs-search h2,.bodyend .fs-search h2 {background-color:burlywood;margin:3rem -1rem 1rem -1rem;padding:0.2rem;color:blanchedalmond}
+.bodybegin .fs-search input[type=text],.bodyend .fs-search input[type=text] {width:80%;border:1px inset burlywood;padding:0.2rem}
+.bodybegin .fs-search #fs_btnsearch,.bodyend .fs-search #fs_btnsearch {border-color:burlywood;background-color:beige }
+
+.bodyend .fs-search {margin:0 !important;padding:0 !important;}
+.bodyend .fs-search .plugin-search {padding:0 !important}
+.bodyend .fs-search .plugin-search .plugin-content {padding:0.5rem 0;margin-top:-1rem}
+
+.csidebar {margin-top:4rem;border-left:5px solid antiquewhite;font-size:0.8rem}
+.csidebar h2 {background-color:darkred;padding:0.3rem;color:#fff}
+.csidebar .plugin:first-of-type {margin-top:0rem}
+.csidebar .plugin .plugin-content {padding:15px}
+.csidebar .plugin .plugin-content li {margin-bottom:0.3rem}
+.csidebar .plugin .plugin-content li a {color:darkred;}
+.csidebar .plugin {background-color:antiquewhite;color:darkred;margin:1rem 0}
+
+ nav.paginator {margin-top:3rem}
+ nav.paginator ul {list-style-type:none;padding:0;margin:5px}
+ nav.paginator ul li {display:inline-block;background-color:burlywood;padding:0.5rem}
+ nav.paginator ul li a {text-decoration:none;color:antiquewhite;font-size:0.8rem}
+ nav.paginator ul li a:hover {color:#ffb}
+ nav.paginator ul li.disabled a {pointer-events:none;color:bisque;filter:opacity(0.6)}
+ nav.paginator .numberpages a {margin:0 4px}
+
+.articles .fs-search {margin:auto;max-width:400px;background-color:antiquewhite;margin-bottom:5rem;padding:1rem}
+.articles .fs-search h2 {background-color:burlywood;margin:-4rem -1rem 1rem -1rem;padding:0.2rem;color:blanchedalmond}
+.articles .fs-search input[type=text] {width:80%;border:1px inset burlywood}
+.articles .fs-search input[type=button] {border-color:burlywood;background-color:beige }
+
+form textarea,form button,form input[type=text],form input[type=password],form input[type=email],form select,form input[type=submit] {
+	border:1px solid burlywood !important;; border-radius:0 !important;;font-size:0.8rem !important;}
+form button,form input[type=submit] {background-color:brown !important;border-style:outset !important;}
+form .input-group-prepend .input-group-text {border-color:burlywood;background-color:burlywood;padding:0 0.5rem;color:antiquewhite}
+
+.csidebar select,.csidebar input[type=text] {max-width:100%}
+
+footer.bottom {background-color:darkred; color:antiquewhite;text-align:center;border-top:1rem solid;height:6rem;margin-bottom:-3rem}
+footer.bottom a {color:burlywood}
+
+hr {border-color:antiquewhite}
+.page h1,.page h2,.page h3,.page h4,.page h5,.page h6 {color:#cc9f50;filter:opacity(0.6)}
+.page h1 {font-size:2.2rem}
+.page h2 {font-size:1.8rem}
+.page h3 {font-size:1.6rem}
+
+.page blockquote {border-color:antiquewhite !important;}
+.page pre {border-color:antiquewhite;background-color:#f5f3f2}
+
+/* Other plugins */
+.content .page .contact3 {margin:0}
+.csidebar .plugin-navigation .year {color:brown;margin-left:-0.8rem;}
+.csidebar .plugin-navigation .month {margin-left:-0.5rem;border-left:0.5rem solid bisque;padding-left:5px;margin-bottom:1rem}
+.reactions-pageend {background-color:#f5f3f0;padding:1rem !important;}
+.reactions-pageend h2 {font-size:1rem;padding:1rem;text-align:center}
+.reactions-pageend form div div button {background-color:transparent !important;border:0 !important;}
+.plugin-tags a {color:brown}
+
+#comments-form {border-radius:0 !important;border-color:burlywood}
+#comments-form form.comment-form {border-radius:0 !important;}
+#comments-form form.comment-form .comment-header {background-color:#f5f3f0;border-radius:0;border-color:burlywood}
+
+#comments .comment-article {background:#fff !important}
+#comments .comment-article .comment-captcha input {background:#fff !important}
+#comments .comment-footer {background:#f5f3f0 !important}
+#comments #comments-list .comment {border-radius:0 !important;border-color:burlywood}
+#comments #comments-list .comment-action {border-radius:0 !important;border-color:burlywood;background-color:#f5f3f0}
+
+#disqus_thread {background-color:#f5f3f0;padding:1rem}
+
+@media (max-width:1200px)
+{
+	.container {min-width:100%}	
+}
+
+@media (max-width:1000px)
+{
+  .articles .col:first-of-type .card-img-top {margin:2rem 0.3rem !important;display:block !important;vertical-align:bottom !important}	
+}
+
+@media (max-width:767px)
+{
+	nav#navprin h1 {width:84%}
+  nav#navprin button.navbar-toggler {background-color:burlywood; color:transparent !important;margin-left:5px }
+  .navbar-toggler-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}	
+	li.dropdown {margin:0;padding:0}
+	.navbar-collapse {margin-top:0.5rem}
+	.navbar-collapse ul li a {border-bottom:1px double #eee; background-color:burlywood;padding:0.5rem 1rem !important;}
+	.navbar-collapse ul li a:hover {color:#ffb !important;}	
+	.csidebar {border:0;border-top:1px solid antiquewhite;padding-top:1rem;margin-top:-1rem}	
+}
+
+@media (max-width:500px)
+{
+	.articles .row {display:block}
+	.articles .row .col .contbreak {display:block}
+}	
+
+@media (max-width:431px)
+{
+	.banner-entry {margin-top:7rem}
+	nav#navprin h1 {width:100%}
+  nav#navprin button.navbar-toggler {margin-top:0.5rem}
+	
+}

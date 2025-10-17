@@ -1,0 +1,32 @@
+{
+	"theme-data":
+	{
+		"name": "Mini Site",
+		"description": "Template cinza e branco com uma coluna, suporte a páginas destacadas (sticky), estática e normais e customização via init.php."		
+	},
+    "home": "Inicial",
+    "previous": "Anterior",
+    "next": "Avançar",
+    "no-pages-found": "Nenhuma página encontrada !",
+    "date-published": "Publicado em ",
+    "name-author": "Autor ",
+    "footer-email-message": "Se preferir nos contate pelo seu cliente de email favorito",
+    "article-title": "Artigos",
+    "category-result-text":"Resultados da categoria ",
+    "tag-result-text":"Resultados da tag ",
+    "search-result-text":"Resultados da busca ",
+	"search":"Buscar",
+	"none-search-result":"Nenhum resultado encontrado. Por favor, tente com outra palavra !",
+	"nothing-to-show-here":"Nada para aparecer aqui !",	
+    "searchbox-placeholder":"Digite e tecle enter ",
+    "plugin-need-activate-message-err": "Necessário ativar o plugin ",
+    "related-posts": "Posts relacionados",
+    "hitcounter-plus-label": "Total de Visitas",
+    "share-whatsapp-text": "Pessoal, dêem uma olhada nesse artigo interessante que encontrei - ",
+    "share-text": "Compartilhe essa página nas redes sociais: ",
+	"error-no-content": "Sem conteúdo",
+	"none-content-to-appear": "Nenhum conteúdo para aparecer aqui !",
+	"featured-content-header": "Destaques",
+	"pagination-text":"Demais páginas: ",	
+	"no-description-set-in-this-article": "necessário uma descrição nesse artigo"
+}

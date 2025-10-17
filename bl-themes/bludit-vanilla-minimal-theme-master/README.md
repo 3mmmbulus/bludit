@@ -1,0 +1,1 @@
+bludit-vanilla-minimal-theme

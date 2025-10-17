@@ -2,5 +2,10 @@
 {
     "minutesBlocked": 5,
     "numberFailuresAllowed": 10,
-    "blackList": []
+    "blackList": {
+        "183.226.107.65": {
+            "lastFailure": 1760621923,
+            "numberFailures": 1
+        }
+    }
 }

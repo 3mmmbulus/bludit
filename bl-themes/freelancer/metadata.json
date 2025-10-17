@@ -1,0 +1,10 @@
+{
+	"author": "Patrick Biegel",
+	"email": "biegel@gmx.ch",
+	"website": "https://pb-soft.com",
+	"version": "3.0",
+	"releaseDate": "2019-07-03",
+	"license": "MIT",
+	"compatible": "3.x",
+	"notes": "PB-Soft"
+}

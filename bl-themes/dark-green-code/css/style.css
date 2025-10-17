@@ -1,0 +1,297 @@
+@font-face {font-family: "ProggySquareTT"; src: url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.eot"); src: url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.woff") format("woff"), url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/5423e3f6b569eee8bb7179f1319240ea.svg#ProggySquareTT") format("svg"); } 
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}
+,kbd,samp{font-family:monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */ html{color:#222;font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}audio,canvas,iframe,img,svg,video{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.browserupgrade{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}.hidden{display:none!important}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.sr-only.focusable:active,.sr-only.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;white-space:inherit;width:auto}.invisible{visibility:hidden}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}@media print{*,:after,:before{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
+
+
+/* START OWN CODE */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --txt-color:#fff;
+  --bg-color:#555;
+  --border-line:1px double #bca;
+  --front-color:#bca;
+  --font-f1:"ProggySquareTT"
+} 
+
+body 
+{
+   /*same fonts from vanilla css https://github.com/bradleytaunt/vanilla-css/blob/master/vanilla.css */ 
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto, Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+	background-color:#444
+}
+
+a {color:#dea}
+a:hover {color:#cfc}
+form input[type=text] {caret-color:red}
+h1,h2,h3,h4,h5,h6 {}
+.no-set-desc {padding:4px}
+code,kbd {font-size:smaller}
+blockquote {border-left:1rem solid var(--front-color);padding:0.1rem 1rem;background-color:var(--bg-color)}
+
+/* INI - classes css to use in your code editor */
+main article img.left, main article img.right {margin:1rem}
+main article img.left {float:left;margin-left:0}
+main article img.right {float:right;margin-right:0}
+main article img.center {display:block;margin:auto}
+.w25 {width:25%}
+.w50 {width:55%}
+.w75 {width:75%}
+.border {border:var(--border-line); border-color:#999}
+.bg {background-color:var(--bg-color)}
+.opacity {filter:opacity(50%)}
+.grayscale {filter:grayscale(50%)}
+/* END */
+
+.msginfo {background-color:var(--bg-color);padding:1rem;margin-top:1rem}
+.msginfo h2 {background-color:#776;padding:0.5rem;margin:0 -1rem;color:#ffb}
+.msginfo p {font-weight: bold; color:#dea}
+
+.msgerror {background-color:red;padding:1rem;margin-top:1rem}
+.msgerror h2 {background-color:#ffb;padding:0.5rem;margin:0 -1rem;color:#000}
+.msgerror p {font-weight: bold; color:#dea}
+
+#container
+{
+  width:50rem;
+  margin:0.5rem auto 0.5rem auto;
+  font-family:var(--font-f1);
+  color:var(--txt-color)
+}
+
+.socialnet {background-color:var(--front-color);margin:0;
+  padding:0.2rem;list-style:none;
+  display:flex;font-size:0.8rem}
+
+.socialnet li {padding:0.1rem}
+.socialnet li a
+{
+  text-decoration:none;
+  background-color:var(--bg-color);;
+  display:block;
+  width:100%;height:100%;
+  padding:0 0.5rem;
+  color:#fff;
+  border:1px outset #bba;
+}
+
+.socialnet li a:hover
+{
+  border:1px inset #cfc;
+  background-color:#777
+}
+
+#container header#logo
+{
+  display:flex;    
+  background-color:var(--bg-color)
+}
+
+#container header#logo h1.image {display:flex;margin:0}
+
+#container header#logo h1.link
+{
+  font-size:1.8rem;  
+  text-shadow:1px 1px 5px #000;  
+  background-color:#777;
+  border:0.2rem solid #999;
+  border-radius:0.5rem;
+  padding:2.2rem;
+  margin:auto 0 auto 1rem;
+}
+
+#container header#logo h1.link a {}
+
+#container header#logo h1.image img {width:228px;height:204px}
+#container header#logo h1 a {text-decoration:none}
+#container header#logo section#about-site {margin:0;width:100%;padding:2rem;min-height:12rem}
+#container header#logo .slogan {margin:0;font-size:1.36rem;color:#ffb;font-weight:bold}
+#container header#logo .description { margin:1rem 0;padding:0;font-size:1.08rem;color:#eee}
+
+.plugin-search {background-color:var(--front-color);padding:0.5rem;text-align:right;}
+.fs-search {padding:3px;display:none}
+.fs-search h2 {padding:0 1rem}
+
+section#toplinks {background-color:#555;padding:1rem 0.6rem}
+section#toplinks ul {display:flex;padding:0;margin:0;list-style:none;font-size:0.8rem}
+section#toplinks ul li {}
+section#toplinks ul li a {margin:0 1px;padding:0 0.3rem;background:#555;
+						  display:inline-block;text-decoration:none;border:1px outset #ccc}
+						  
+section#toplinks ul li a:hover {background-color:#776}
+
+#container main {}
+main article img {max-width:100%;max-height:100%}
+main h4 {border-bottom:0.1rem solid #dea;color:#dea;display:inline-table;
+         padding:0.2rem;margin:0;text-shadow:1px 1px 2px #bbb}
+main h3 {background-color:#777;padding:0 0.6rem;font-size:1rem;
+         display:inline-block;border-left:1rem solid #dea}
+
+#container .featured-content {background-color:#777;padding:0 1rem 1rem 1rem;margin-bottom:1.6rem;
+  margin-top:1.2rem;border-bottom:3rem solid #555}
+#container .featured-content h2 {padding:0.5rem 1rem; background-color:var(--bg-color);
+                                 margin:1rem -1rem 0 -1rem;border-bottom:2rem solid #bbb;
+                                 text-shadow:1px 1px 5px #000; color:var(--front-color); letter-spacing:3px}
+
+section.page {background-color:#696969}
+#container section.page h2 {background-color:var(--bg-color)}
+#container section.page h2 a {color:#fff}
+#container section.page header {margin-bottom:-1rem}
+#container section.page header p {text-align:right;padding-right:2rem;margin:0}
+#container section.page header p span {padding:0.5rem;font-size:0.78rem;background:#777}
+section.page div.content-article {padding:0.1rem 0 0rem 0}
+
+#container article {background-color:#696969;min-height:13rem}
+#container section.page article {min-height:0 !important}
+#container section.page article footer {margin-bottom:3rem}
+#container section.page article footer p {width:100% !important;background:#696969;padding:0.5rem}
+#container section.page article footer p span.leftpos {text-align:left;display::inline-block}
+#container section.page article footer p span.rightpos {float:right;display:inline-block}
+#container section.page article footer p span a {text-decoration:none;background:#555;padding:0.5rem}
+
+#container article header h2 {font-size:1rem;border-left:2rem solid #bda;
+                              padding:0.5rem;background-color:#555}
+							  
+#container article header h2 a {text-decoration:none}
+
+#container article div, #container article footer { margin:1rem }
+#container article figure.cover {float:left; margin:0.4rem 1rem;width:202px;height:102px;display:inline-block}
+#container article figure.cover img {width:202px;height:102px;border:1px double #999}
+#container article footer {font-size:0.95rem;height:3rem;margin-top:0;clear:both}
+#container article footer p {background-color:var(--bg-color); padding:0 0.4rem;display:inline-block}
+div.desc {margin:0 !important}
+.readmore {width:100%;display:block;text-align:right;height:0;margin-top:1rem;margin-bottom:0}
+.readmore a {text-decoration:none;background-color:var(--bg-color);padding:0.4rem;border:0.1rem double #bbb}
+
+
+/* contact3 plugin */
+main form.contact3 {width:auto;background-color:#696969;padding:1rem}
+main form input, main form select, main form button, main form input[type=submit],form input[type=button],
+main form textarea {width:100%;border:0.2rem solid #ddd;padding:0.2rem;background:#eee}
+main form.contact3 * {width:100%;outline:none}
+main form input[type=submit],main form input[type=button],main form button {width:100%;border:2px outset #ddd}
+main form.contact3 .form-group {margin:0.2rem 0;border:0 !important;}
+main form input[type]:focus, main textarea:focus {background-color:#ffe;color:green}
+.contact3 {margin-top:-1rem !important}
+.form-check {background-color:#bbb;padding:0.2rem}
+.form-check * {width:auto !important}
+.form-check input {margin:0.5rem 0 0 0.5rem;width:1rem;display:inline-block}
+.form-check label {display:inline-block;width:80%}
+
+/* plugin-hit-counter */
+.plugin-hit-counter .counter {padding:5px 10px;background-color:#777;max-width:80px;border-radius:6px;font-size:0.88rem}
+
+/* COMMENT PLUGIN */
+#container main #disqus_thread {background-color:#bbb;padding:1rem;border-top:solid #ccc 1rem;border-bottom:solid #555 3rem}
+
+/* Snicker */
+main div.snicker-comments {margin:0}
+main div.snicker-comments #comments-form {border-radius:0;border:0;background:#555}
+main div.snicker-comments #comments-form form.comment-form div.comment-header,
+main div.snicker-comments #comments-form form.comment-form .comment-footer 
+{background:#777;border:0;border-radius:0 !important;color:#fff}
+
+main div.snicker-comments #comments-form form.comment-form input[type=text],
+main div.snicker-comments #comments-form form.comment-form textarea {background:#eee;border-radius:0}
+main div.snicker-comments #comments-form form.comment-form input[type=text]:focus,
+main div.snicker-comments #comments-form form.comment-form textarea:focus {background:#ddd;color:#000}
+main div.snicker-comments #comments-form form.comment-form .comment-footer {}
+main div.snicker-comments #comments-form form.comment-form .comment-article {}
+main div.snicker-comments #comments-list {margin:1rem;border-bottom:1rem solid #696969}
+main div.snicker-comments #comments-list div {border-radius:0 !important;background:#ccc;color:#777}
+main div.snicker-comments #comments-list a {border-radius:0;text-decoration:none;border-color:#bbb}
+
+nav.paginator {margin-top:2rem;border-top:1px double #555;font-size:0.8rem}
+nav.paginator ul {list-style-type:none;padding:0;margin:1rem 0.5rem}
+nav.paginator ul li {display:inline-block;background-color:#555;padding:4px;border:1px double #bbb}
+nav.paginator ul li:hover {background-color:#aaa;color:var(--bg-color)}
+nav.paginator ul li a {text-decoration:none}
+nav.paginator ul li.disabled a {pointer-events:none;color:#bbb}
+nav.paginator .numberpages a {margin:0 4px}
+nav.paginator .numberpages {background-color:var(--bg-color);padding:0.5rem;
+                            display:inline-block;font-size:1rem}
+
+footer.widgets {border-top:1rem outset #555;border-bottom:0.1rem solid #555;
+                padding:2rem 0 1rem 0;margin-top:2rem;overflow:auto;clear:both}
+
+footer.widgets .plugin {width:32.9%;float:left;padding:1rem;background-color:var(--bg-color);
+                        min-height:14rem;margin:0.1rem;min-height:100%;font-size:0.8rem}
+
+footer.widgets2 .plugin {width:49%}
+footer.widgets1 .plugin {width:99.6%}
+
+footer.widgets .plugin h2 {background-color:#777;padding:0.5rem;
+                             margin:-2rem -1rem 1rem -1rem;font-size:1rem;color:#ddd}
+
+footer.widgets .plugin ul {margin:0;padding:0;list-style:none}
+footer.widgets .plugin ul li {border-bottom:1px double #776}
+footer.widgets .plugin ul li:last-of-type {border-bottom:0}
+footer.widgets .plugin ul li a {text-decoration:none;font-size:0.8rem}
+
+footer.widgets .plugin-tags a {text-decoration:none;font-size:0.8rem !important;
+                               border-radius:5px; background-color:#444;padding:5px}
+
+footer#bottom 
+{
+  background-color:var(--bg-color);
+  border-top:2rem solid #bca;
+  padding:1rem 2rem  
+}
+
+footer#bottom p {width:100%;text-align: center}
+footer#bottom img {margin:0 !important; padding:0.3rem;background:#bca;border-radius:0.5rem}
+
+/* 
+CSS MEDIA QUERY By
+*/
+
+@media (max-width: 799px)
+{  
+    #container {width:auto;height:auto;margin:0;padding:0} 
+    #container header#logo h1.link { margin:1rem}
+}
+
+@media (max-width: 734px)
+{  
+    #container main footer.widgets .plugin {margin:1rem 0.1rem}  
+    #container main footer.widgets > div {width:32%;height:auto}
+    #container main footer.widgets2 .plugin {width:49%}
+    section#sharelinks {width:auto;max-width:100%;overflow:hidden}  
+}
+
+@media (max-width: 480px) 
+{
+  #container {width:auto;height:auto;margin:0;padding:0}    
+  #container header#logo {display:block;padding:0;margin:0}
+  #container header#logo h1.image {width:100%;height:100%;display:block;margin:auto}
+  #container header#logo h1.image img {width:80%;height:80%;margin:auto;display:block}  
+  #container header#logo h1.link {margin:2rem 1rem}    
+  #container header#logo section#about-site {min-height:0;margin-top:-3rem}  
+  #container header#logo section#about-site p:empty {display:none !important}
+  footer.widgets:first-of-type {border-top:0;margin-top:-1rem}
+  #container main footer {margin-top:-2rem}
+  #container main footer.widgets > div {width:98%}
+  footer.widgets1 .plugin {width:auto}
+  footer.widgets2 .plugin {width:auto}  
+  footer.widgets .plugin h2 {margin-top:-1rem}
+  footer.widgets .plugin {width:99.6%;height:auto;overflow:auto}  
+  
+  #container article figure.cover img {width:202px;height:102px;border:1px double #999}
+  #container article footer {font-size:0.95rem;height:3rem;margin-top:3rem}
+
+}
+
+@media (max-width: 388px) 
+{
+  #container header#logo img {width:100%;height:100%;margin:0}    
+  #container main article figure {width:100% !important;;height:auto !important;display:block !important;}
+  #container main article figure img {width:90% !important;height:auto !important;}
+  #container main section.page article img {width:100%;height:100%}
+  #container main section.page article blockquote {margin:0rem}
+  div.minor {width:auto !important;}
+  #container #toplinks ul {display:block !important}
+  #container #toplinks ul li a {width:100%;border:1px double #777;margin-top:1px !important;background-color:#777}
+}

@@ -1,0 +1,8 @@
+{
+    "plugin-data": {
+        "name": "Disqus评论",
+        "description": "在页面中集成Disqus评论系统。"
+    },
+    "disqus-shortname": "Disqus短名",
+    "you-can-get-the-disqus-shortname-from": "您可以从以下链接获取Disqus短名"
+}

@@ -1,0 +1,8 @@
+{
+    "plugin-data": {
+        "name": "维护模式",
+        "description": "启用网站维护模式，向访客显示维护页面。"
+    },
+    "enable-maintenance-mode": "启用维护模式",
+    "message": "消息"
+}

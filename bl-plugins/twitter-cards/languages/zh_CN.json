@@ -1,0 +1,6 @@
+{
+    "plugin-data": {
+        "name": "Twitter卡片",
+        "description": "为页面添加Twitter Cards元标签，优化Twitter分享。"
+    }
+}

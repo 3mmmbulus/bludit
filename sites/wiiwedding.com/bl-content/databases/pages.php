@@ -1,5 +1,27 @@
 <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
 {
+    "\u8303\u5fb7\u8428\u8303\u5fb7\u8428\u53d1": {
+        "title": "\u8303\u5fb7\u8428\u8303\u5fb7\u8428\u53d1",
+        "description": "",
+        "username": "admin",
+        "tags": [],
+        "type": "published",
+        "date": "2025-10-16 22:01:51",
+        "dateModified": "",
+        "position": 2,
+        "coverImage": "",
+        "category": "",
+        "md5file": "7ecf100f19ec72d3be0387e1dcbe08e4",
+        "uuid": "bffe3b9c06c887cd3b8739d9632b58c0",
+        "allowComments": true,
+        "template": "",
+        "noindex": false,
+        "nofollow": false,
+        "noarchive": false,
+        "custom": [
+            false
+        ]
+    },
     "create-your-own-content": {
         "title": "Create your own content",
         "description": "",
